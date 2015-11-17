@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quick start - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Quick start";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Quick start</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#purchasing-and-accessing-megaload">Purchasing and accessing Megaload</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#getting-started-with-megaload">Getting started with Megaload</a></li>
+                
+                    <li><a class="toctree-l4" href="#writing-a-megaload-test">Writing a Megaload test</a></li>
+                
+                    <li><a class="toctree-l4" href="#dashboard">Dashboard</a></li>
+                
+                    <li><a class="toctree-l4" href="#real-time-metrics">Real-time metrics</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Quick start</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="purchasing-and-accessing-megaload">Purchasing and accessing Megaload</h1>
+<p>To get started with Megaload, you must first purchase Megaload in the Amazon Web Services Marketplace.</p>
+<ol>
+<li>Go to the <a href="https://aws.amazon.com/marketplace">AWS Marketplace</a> and search for "Megaload".</li>
+<li>Select "Megaload Load Testing" from the search results.</li>
+<li>Review the information on Megaload Load Testing page, and then click <strong>Continue</strong>.<br />
+Follow the steps in Amazon to complete the purchase.</li>
+</ol>
+<p>The Megaload instance contains all components ready to use. To start using Megaload:</p>
+<ol>
+<li>Launch MegaloadUI via 1-click. <!--FIXME: not sure how this works--></li>
+<li>Access the application via your web browser at <code>http://&lt;EC2_Instance_Public_DNS&gt;:8080/index.html</code>.  <br />
+<img alt="" src="../images_qs/login-page.png" /></li>
+<li>Log in using the username “admin” and the <em>instance_id</em> of the instance without '-' as the password.<br />
+<img alt="" src="../images_qs/login.png" /></li>
+</ol>
+<h1 id="getting-started-with-megaload">Getting started with Megaload</h1>
+<h2 id="writing-a-megaload-test">Writing a Megaload test</h2>
+<p>Megaload supports two types of test specifications for load testing. Tests for HTTP interfaces can be written in JSON, while tests for XMPP are written in plain <a href="http://www.erlang.org/">Erlang</a>. To get you started with the tests, look at the following HTTP example:</p>
+<pre><code class="json">[{&quot;test&quot; : {&quot;id&quot; : &quot;MyFirstTest&quot;,
+            &quot;phases&quot; : [&quot;Phase1&quot;],
+            &quot;plugins&quot; : [&quot;Server1&quot;]
+           }},
+
+ {&quot;plugin&quot; : {&quot;id&quot; : &quot;Server1&quot;,
+              &quot;plugin_info&quot; : {&quot;http-plugin&quot; : {&quot;servers&quot; : [{&quot;host&quot; : &quot;10.100.0.120&quot;,
+                                                              &quot;port&quot; : 5050,
+                                                              &quot;ssl&quot; : false}
+                                                            ],
+                                                &quot;stats_per_url&quot; : true
+                                               }}
+             }},
+
+ {&quot;phase&quot; : {&quot;id&quot; : &quot;Phase1&quot;,
+             &quot;arrival_rate&quot; : 10,
+             &quot;duration&quot; : 600000,
+             &quot;concurrent_scenarios&quot; : 250,
+             &quot;rate&quot; : 500,
+             &quot;scenarios&quot; : [{&quot;Scenario1&quot; : 1}]}},
+
+ {&quot;scenario&quot; : {&quot;id&quot; : &quot;Scenario1&quot;,
+                &quot;keepalive&quot; : true,
+                &quot;actions&quot; : [ {&quot;http-request&quot; : {&quot;plugin_id&quot; : &quot;Server1&quot;,
+                                                 &quot;method&quot; : &quot;GET&quot;,
+                                                 &quot;path&quot; : &quot;/index.html&quot;
+                                                }
+                              }]}}
+]
+</code></pre>
+
+<p>In this test case:</p>
+<ul>
+<li><strong>duration</strong> runs for 10 minutes (600000 milliseconds)</li>
+<li><strong>arrival_rate</strong> starts 10 new users per second, up to 250 concurrent users</li>
+<li><strong>rate</strong> generates 500 requests per second</li>
+<li><strong>keepalive</strong> users stay connected to the HTTP server and repeat the same <strong>http-request</strong> GET "/index.html" for the duration of the phase</li>
+</ul>
+<h2 id="dashboard">Dashboard</h2>
+<p>There are two main dashboards for controlling Megaload: <!-- FIXME --></p>
+<ul>
+<li><strong>Load testing</strong> provides all the facilities to edit, upload and execute test cases </li>
+<li><strong>Monitoring</strong> provides real-time metrics of the system</li>
+</ul>
+<p>To access the <strong>Load testing</strong> dashboard, go to <code>http://&lt;EC2_Instance_Public_DNS&gt;:8080/megaload/index.html</code>. The primary navigation bar provides two main menus, <strong>Load generators</strong> and <strong>Load test</strong>.</p>
+<p>The <strong>Load generators</strong> page shows the Megaload instances that have been deployed. In the following example there is one Megaload generator <strong>Megaload 1.0.1</strong>, which consists of one load engine (Megaload node).</p>
+<p><img alt="" src="../images_qs/main.png" /></p>
+<p>The next sections explain step by step how to use the <strong>Load test</strong> functionality to write, upload and execute load test.</p>
+<h3 id="editing-json-tests">Editing JSON tests</h3>
+<p>The <strong>Edit test cases</strong> tab provides a JSON test editor that does basic syntactic checks to help you write test specifications. To view the editor, first select the Megaload generator on the left. This will show the editor on the right, containing the test specification that is currently loaded.</p>
+<p><img alt="" src="../images/editor.png" />
+<!-- <img alt="" src="images/edit-file.png" /> --></p>
+<p>Note that using the editor is not obligatory. You can write your tests in any text editor of your choice, and then <a href="#loading-a-json-test">upload</a> the files directly to Megaload. If you need to do further editing, you can <a href="../use_load_testing/#opening-a-test">open</a> your files in the editor and make changes there.</p>
+<p>Try to edit the previous example by replacing the server in the <em>http-plugin</em> object with a server you want to test. You may also amend the <em>path</em> of the <em>http-request</em>.</p>
+<h3 id="loading-a-json-test">Loading a JSON test</h3>
+<p>The <strong>Load test</strong> page provides all the functionality required to upload and run tests.</p>
+<p>To upload a test specification:</p>
+<ol>
+<li>Click the <strong>Upload test cases</strong> tab.</li>
+<li>Click the load generator on the left. This shows the upload menu on the right.</li>
+<li>Click <strong>Add files</strong> and select the files to upload.</li>
+<li>Click <strong>Start upload</strong> or <strong>Start</strong> to upload the individual files.<br />
+   The status shows as <strong>Uploaded</strong> or, if the test specification is invalid, <strong>Error</strong>. If an error occurs, a pop-up window will show the reason.</li>
+</ol>
+<p><img alt="" src="../images_qs/test-upload.png" /></p>
+<h3 id="running-a-test">Running a test</h3>
+<p>The <strong>Runner</strong> tab provides the controls to start and stop a test.</p>
+<p>To run a test:</p>
+<ol>
+<li>Click the load generator on the left. This shows the test control menu on the right.</li>
+<li>Select the test identifier from the drop-down list next to the <strong>Start</strong> button.</li>
+<li>Click <strong>Start</strong>.</li>
+</ol>
+<p>The following screenshot shows a test that has been started:</p>
+<p><img alt="" src="../images_qs/test-started.png" /></p>
+<h3 id="viewing-test-results">Viewing test results</h3>
+<p>The <strong>Load report</strong> tab provides a summary of the test being executed. The <strong>Load report</strong> consists of six tabs with additional information, the main ones are:</p>
+<ul>
+<li>
+<p><strong>Status</strong> shows the current status of the test, which can be one of the following: <strong>Running</strong>, <strong>Finished</strong> or <strong>Stopped</strong>. The status <strong>Stopped</strong> is shown when the user clicks on <strong>Stop</strong> in the <strong>Runner</strong> tab.<br />
+<img alt="" src="../images_qs/test-status.png" /></p>
+</li>
+<li>
+<p><strong>Response time</strong> shows a statistical report about the response time of the current protocol (selected using the drop-down buttons) in the selected load engine. At the bottom of the page, there is a table with the response time per URL requested. Statistics will show up approximately one minute after test start.<br />
+<img alt="" src="../images_qs/test-responseTime.png" /></p>
+</li>
+<li>
+<p><strong>Rate</strong> shows a statistical report about the rate of requests in the selected load engine.<br />
+<img alt="" src="../images_qs/test-rate.png" /></p>
+</li>
+<li>
+<p><strong>Statistics</strong> provides a direct link to the full metrics dashboard, also accessible from the <strong>Monitoring</strong> link at the top of the page.</p>
+</li>
+</ul>
+<h2 id="real-time-metrics">Real-time metrics</h2>
+<p>The <strong>Monitoring</strong> dashboard provides all the real-time metrics under <code>http://&lt;EC2_Instance_Public_DNS&gt;:8080/#/metrics</code>.</p>
+<p>The <strong>Collected Metrics</strong> tab displays the load generator and its load engines on the left.</p>
+<p><img alt="" src="../images_qs/metrics-collected.png" /></p>
+<ul>
+<li>
+<p>The load generator, <strong>Megaload 1.0.1</strong> aggregates the counters from all the load engines, displaying metrics such as the number of scenarios or sucessful requests for the whole system. Click the name to display the drop-down menu with the full list of available metrics. For example, select <strong>global_counter_scenarios</strong> and check the concurrent users. The next images shows a custom deployment with two load engines.<br />
+<img alt="" src="../images_qs/metrics-aggr.png" /></p>
+</li>
+<li>
+<p>Below the load generator are all the load engines that have been deployed. Select one of them to display the drop-down menu containing counters and histograms. For example, select <strong>Counters and Gauges</strong> and check the concurrent users for that node.<br />
+<img alt="" src="../images_qs/metrics-node.png" /></p>
+</li>
+<li>
+<p><strong>Histograms</strong> provide information about response times, connection times or requests per second on each of the individual load engines. All these measurements and their units are described in detail in the <a href="../counters/">Counters</a> section.
+  <img alt="" src="../images_qs/metrics-histogram.png" /></p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../use_dashboards/" class="btn btn-neutral float-right" title="The Megaload UI"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../use_dashboards/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

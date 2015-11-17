@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Protocols - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Protocols";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Protocols</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#protocols">Protocols</a></li>
+                
+                    <li><a class="toctree-l4" href="#http">HTTP</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Test elements &raquo;</li>
+        
+      
+    
+    <li>Protocols</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="protocols">Protocols</h1>
+<h2 id="http">HTTP</h2>
+<h3 id="plugin-definition">Plugin definition</h3>
+<p>The <code>http-plugin</code> object represents the <code>plugin_info</code> in a <code>plugin</code> object.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>servers</code></td>
+<td>list of server objects</td>
+<td>Yes</td>
+<td>No</td>
+<td>Servers list; allows IP load balancing.</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td>integer</td>
+<td>No</td>
+<td>No</td>
+<td>Timeout in milliseconds; defaults to 30000;</td>
+</tr>
+<tr>
+<td><code>connect_timeout</code></td>
+<td>integer</td>
+<td>No</td>
+<td>No</td>
+<td>Connection timeout in milliseconds; defaults to 15000;</td>
+</tr>
+<tr>
+<td><code>stats_per_url</code></td>
+<td>boolean</td>
+<td>No</td>
+<td>No</td>
+<td>Generates stats per URL.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>server</code> object represents the server information.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>IPv4 or IPv6 address of the HTTP server.</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Port number of the HTTP server of the SUT.</td>
+</tr>
+<tr>
+<td><code>ssl</code></td>
+<td>boolean</td>
+<td>Yes</td>
+<td>No</td>
+<td>Sets SSL connection.</td>
+</tr>
+</tbody>
+</table>
+<p>The plugin does a round robin between servers to establish connections. Statistics are retrieved per IP. 
+<code>host</code> accepts the following address representations for IPv4:</p>
+<ul>
+<li>Dotted decimal: <code>192.0.2.235</code></li>
+<li>Dotted hexadecimal: <code>0xC0.0x00.0x02.0xEB</code></li>
+<li>Hexadecimal: <code>0xC00002EB</code></li>
+<li>Decimal: <code>3221226219</code></li>
+</ul>
+<p>It accepts the following representations for IPv6:</p>
+<ul>
+<li>Full address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></li>
+<li>Shortened address, without leading zeroes: <code>2001:db8:0:0:0:ff00:42:8329</code></li>
+<li>Shortened address, without consecutive sections of zeroes: <code>2001:db8::ff00:42:8329</code></li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code class="json">{&quot;http-plugin&quot; : {&quot;servers&quot; : [{&quot;host&quot; : &quot;192.165.0.1&quot;,
+                                &quot;port&quot; : 5050,
+                                &quot;ssl&quot; : false}
+                              ],
+                  &quot;stats_per_url&quot; : true
+                 }
+}
+</code></pre>
+
+<h3 id="http-request">HTTP request</h3>
+<p>The <code>http-request</code> object performs an HTTP request.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>plugin_id</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Plugin ID. Must belong to one of the plugins declared in the specification.</td>
+</tr>
+<tr>
+<td><code>method</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Valid HTTP method: OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>URI of the request as defined in <a href="http://tools.ietf.org/html/rfc2616#section-5.1.2">http://tools.ietf.org/html/rfc2616#section-5.1.2</a>. Can be the result of an action.</td>
+</tr>
+<tr>
+<td><code>headers</code></td>
+<td>object</td>
+<td>No</td>
+<td>No</td>
+<td>JSON object which represents the header list. Each member is a header pair. <code>{ header-name : header-value }</code></td>
+</tr>
+<tr>
+<td><code>body</code></td>
+<td>string or list of strings</td>
+<td>No</td>
+<td>Yes</td>
+<td>String or list of strings which are appended to build the body. Can be replaced for the result of an action.</td>
+</tr>
+<tr>
+<td><code>group</code></td>
+<td>string</td>
+<td>No</td>
+<td>No</td>
+<td>Group label used in reporting. For example: response times per group of requests or successful/failed requests per group.</td>
+</tr>
+<tr>
+<td><code>assert_status</code></td>
+<td>string</td>
+<td>No</td>
+<td>No</td>
+<td>Asserts HTTP response status code is that specified. Determines whether a request is successful.</td>
+</tr>
+<tr>
+<td><code>assert_body</code></td>
+<td>object</td>
+<td>No</td>
+<td>Yes</td>
+<td>Asserts that the body of the response matches the specification provided here. Determines whether a request is successful.</td>
+</tr>
+</tbody>
+</table>
+<p>If the evaluation of <code>path</code> or <code>body</code> fails before the request is sent, the request is considered invalid and the scenario aborted. </p>
+<p>Response asserted in <code>assert_body</code> is of the form:</p>
+<pre><code class="json">{
+      &quot;body&quot; : &lt;BODY&gt;,
+      &quot;status&quot; : &lt;STATUS&gt;,
+      &quot;reason&quot; : &lt;REASON&gt;,
+      &quot;headers&quot; : &lt;HEADERS&gt;
+}
+</code></pre>
+
+<h4 id="example_1">Example</h4>
+<pre><code class="json">{&quot;http-request&quot; : {
+                    &quot;plugin_id&quot; : &quot;my_web_server&quot;,
+                    &quot;method&quot; : &quot;POST&quot;,
+                    &quot;path&quot; : &quot;/charges&quot;,
+                    &quot;headers&quot; : {“Content-Type” : “application/json”},
+                    &quot;body&quot; : &quot;{ \&quot;id\&quot;: \&quot;cu_228rD6XZsvYmuc\&quot;}&quot;,
+                    &quot;assert_status&quot; : &quot;200&quot;,
+                    &quot;assert_body&quot; :
+                      {&quot;jsonpath-value&quot; :
+                        {&quot;path&quot; : &quot;body.count&quot;,
+                          &quot;value&quot; : 5}}
+                  }
+}
+</code></pre>
+
+<p>Assuming the body of the response is something like:</p>
+<pre><code class="json">{&quot;count&quot; : 2,
+ &quot;data&quot; : [ { &quot;id&quot; : &quot;d98fn357fn23&quot;,
+              &quot;amount&quot; : 6324,
+              &quot;currency&quot; : &quot;gbp&quot; },
+            { &quot;id&quot; : &quot;d98fn3qwrqr1&quot;,
+              &quot;amount&quot; : 50,
+              &quot;currency&quot; : &quot;gbp&quot; }
+          ]
+}
+</code></pre>
+
+<p>the request would be counted as failed as the value for <code>count</code> is 2 and not 5.</p>
+<p>The HTTP client redirects all requests that <strong>MUST</strong> be redirected following: <a href="http://tools.ietf.org/html/rfc2616#section-10.3">http://tools.ietf.org/html/rfc2616#section-10.3</a>. Those redirects are included in the statistics and any other redirection should be handled from the test specification.</p>
+<p>HTTP requests return a JSON object, which can be queried with the JSON actions. The following table shows the format of the HTTP response:</p>
+<p>The <code>http-response</code> object contains the following:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status</code></td>
+<td>string</td>
+<td>Status code, represented as a string. See <a href="http://tools.ietf.org/html/rfc2616#section-6.1.1">http://tools.ietf.org/html/rfc2616#section-6.1.1</a>.</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>string</td>
+<td>Reason phrase. See <a href="http://tools.ietf.org/html/rfc2616#section-6.1.1">http://tools.ietf.org/html/rfc2616#section-6.1.1</a>.</td>
+</tr>
+<tr>
+<td><code>headers</code></td>
+<td>list of objects</td>
+<td>Response headers as a list of objects. Header name is always lowercase.</td>
+</tr>
+<tr>
+<td><code>body</code></td>
+<td>string</td>
+<td>Response body.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example_2">Example</h4>
+<!-- FIXME ? -->
+
+<pre><code class="json">{
+  &quot;status&quot; : &quot;200&quot;,
+  &quot;reason&quot; : &quot;OK&quot;,
+  &quot;headers&quot; : [{&quot;Content-Type&quot; : &quot;application/json&quot;}], 
+  &quot;body&quot; : &quot;{\&quot;customer\&quot; : { \&quot;active_card\&quot; : {\&quot;type\&quot; : \&quot;Visa\&quot;,
+                                                 \&quot;exp_month\&quot; : 6},
+                              \&quot;email\&quot; : \&quot;me@me.com\&quot;
+                             }
+            }”
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../actions/" class="btn btn-neutral float-right" title="Actions"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../examples/" class="btn btn-neutral" title="Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../examples/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../actions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

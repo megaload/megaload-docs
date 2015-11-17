@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Test specification - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Test specification";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Test specification</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#test-specification">Test specification</a></li>
+                
+                    <li><a class="toctree-l4" href="#test">Test</a></li>
+                
+                    <li><a class="toctree-l4" href="#plugin">Plugin</a></li>
+                
+                    <li><a class="toctree-l4" href="#phase">Phase</a></li>
+                
+                    <li><a class="toctree-l4" href="#scenario">Scenario</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Tests &raquo;</li>
+        
+      
+    
+    <li>Test specification</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="test-specification">Test specification</h1>
+<p>This chapter describes the JSON test specification supported by Megaload. Objects describing the test, phases, scenarios and plugins can be uploaded in separate files. The system will validate that all required configuration is present when starting the load test. </p>
+<!--
+FIXME:
+\section{Types}
+TODO Basic, integer, string... Describe them!
+-->
+
+<h2 id="test">Test</h2>
+<p>The <code>test</code> object contains the major elements of a Megaload test.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Unique test identifier.</td>
+</tr>
+<tr>
+<td><code>phases</code></td>
+<td>ne&sup1;-list of strings</td>
+<td>Yes</td>
+<td>No</td>
+<td>List of phase identifiers. These phases must be loaded in the system before starting the test.</td>
+</tr>
+<tr>
+<td><code>plugins</code></td>
+<td>list of strings</td>
+<td>Yes</td>
+<td>No</td>
+<td>List of plugin identifiers. All plugins used during the test must be listed here.</td>
+</tr>
+<tr>
+<td><code>global_options</code></td>
+<td>ne-list of global options</td>
+<td>No</td>
+<td>No</td>
+<td>Global test options that can be retrieved internally by any action through all the test. Each option is a JSON object with a single pair key-value. The value must be a basic JSON type: boolean, number or string.</td>
+</tr>
+<tr>
+<td><code>assertions</code></td>
+<td>ne-list of assertion objects</td>
+<td>No</td>
+<td>No</td>
+<td>Assertions to check that results match test expectations.</td>
+</tr>
+</tbody>
+</table>
+<p><small>&sup1;Non-empty</small></p>
+<h3 id="example">Example</h3>
+<pre><code class="json">{&quot;test&quot; : {
+            &quot;id&quot; : &quot;test&quot;,
+            &quot;global_options&quot; : [{&quot;option1&quot; : &quot;abc&quot;},
+                                {&quot;option2&quot; : 4567}]
+            &quot;phases&quot; : [&quot;phaseOne&quot;],
+            &quot;plugins&quot; : [&quot;my_web_server&quot;]
+          }
+}
+</code></pre>
+
+<!-- FIXME + sort out page breaks! -->
+
+<h2 id="plugin">Plugin</h2>
+<p>The <code>plugin</code> object defines the target server or system under test.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Unique plugin identifier.</td>
+</tr>
+<tr>
+<td><code>plugin_info</code></td>
+<td>object</td>
+<td>Yes</td>
+<td>No</td>
+<td>Plugin specification. See <a href="../protocols/">Protocols</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1">Example</h3>
+<pre><code class="json">{&quot;plugin&quot; : {
+              &quot;id&quot; : &quot;my_web_server&quot;,
+              &quot;plugin_info&quot; : { &quot;http-plugin&quot; : {
+                                                  &quot;host&quot; : &quot;192.165.0.1&quot;,
+                                                  &quot;port&quot; : 5050,
+                                                  &quot;ssl&quot; : false
+                                                }
+                              }
+            }
+}
+</code></pre>
+
+<h2 id="phase">Phase</h2>
+<p><a name="phase"></a></p>
+<p>The <code>phase</code> object describes how test scenarios will be executed. A test can contain multiple phases.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Unique phase identifier.</td>
+</tr>
+<tr>
+<td><code>arrival_rate</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>The number of new worker processes (users) started per second. At the beginning of the phase or scenario, workers processes are started gradually, to avoid a call burst.</td>
+</tr>
+<tr>
+<td><code>duration</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>The total duration of the phase in milliseconds. Scenarios that are not completed in the predefined time are allowed to finish while the new phase starts. This can result in functional scenarios overlapping between phases, but the rate will be controlled by the new phase parameters.</td>
+</tr>
+<tr>
+<td><code>concurrent_scenarios</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>The maximum number of worker processes (concurrent users) that can run in parallel per instance.</td>
+</tr>
+<tr>
+<td><code>rate</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>The target rate of requests per second that the system must reach.</td>
+</tr>
+<tr>
+<td><code>keepalive</code></td>
+<td>boolean</td>
+<td>No</td>
+<td>No</td>
+<td>Indicates whether a user must be kept alive between phases. A value of ‘true’ will keep those users running and all the established connections open. If the value is ‘false’, all users will terminate between phases.</td>
+</tr>
+<tr>
+<td><code>scenarios</code></td>
+<td>ne-list of objects</td>
+<td>Yes</td>
+<td>No</td>
+<td>A list of the scenarios that must run in this phase with their relative frequency. Frequency is used to randomly choose between scenarios. Each scenario object has a pair <code>{scenario : frequency}</code></td>
+</tr>
+<tr>
+<td><code>assertions</code></td>
+<td>ne-list of assertion objects</td>
+<td>No</td>
+<td>No</td>
+<td>Assertions to check that results match phase expectations. For more information, see <a href="../assertions/">Assertions</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="frequency">Frequency</h3>
+<!--FIXME:-->
+
+<p>In a test specification, a phase consists of one or more scenarios. These scenarios are run in parallel by worker processes until the limit of processes declared in <code>concurrent_scenarios</code> is reached (see <a href="#phase">Phase</a>). It is not possible to know in advance how many worker processes will be started. There are several reasons for this: the test duration might be too short to reach the <code>concurrent_scenarios</code> limit; the scenarios might not be set to <code>keepalive</code>, so that a new worker is started once a scenario is finished; or a scenario could be aborted, necessitating a new worker. However, the number of scenarios of each kind that is executed can be defined through the property <code>frequency</code>. When a new worker process is about to start, it uses the <code>frequency</code> parameter to make its choice following the random weighted choice algorithm. In this algorithm, the phases with a heavier frequency will be chosen more often.</p>
+<ul>
+<li>Get all scenarios declared on the current phase 𝑆<sub>𝑖</sub> . . . 𝑆<sub>𝑗</sub></li>
+<li>Create an array with the cumulative frequencies: 𝐴𝑐𝑐 = [𝐹<sub>𝑖</sub>, 𝐹<sub>𝑖</sub> + 𝐹<sub>𝑖+1</sub>, . . . &sum;𝐹<sub>𝑖</sub> ]</li>
+<li>Generate a random number in 𝟢 · · · &sum;𝐹<sub>𝑖</sub></li>
+<li>Select the position 𝑖 where 𝐴𝑐𝑐[𝑖] &lt;= 𝑟𝑎𝑛𝑑𝑜𝑚 and 𝐴𝑐𝑐[𝑖-𝟣] &gt; 𝑟𝑎𝑛𝑑𝑜𝑚</li>
+<li>The selected scenario is 𝑆<sub>𝑖</sub>.</li>
+</ul>
+<p>For this algorithm to work, <code>frequency</code> must be a positive integer greater than 0. There is no requirement for frequencies to sum up to any amount. In the case of compound scenarios (scenarios which contain a list of components), the frequencies of the components are discarded and the frequency of the compound scenario is the one selected for the algorithm.</p>
+<h3 id="example_2">Example</h3>
+<pre><code class="json">{&quot;phase&quot; : {
+             &quot;id&quot; : &quot;phaseOne&quot;,
+             &quot;arrival_rate&quot; : 10,
+             &quot;duration&quot; : 3000,
+             &quot;concurrent_scenarios&quot; : 5,
+             &quot;rate&quot; : 5000,
+             &quot;scenarios&quot; : [{&quot;scenarioOne&quot; : 1}]
+           }
+}
+</code></pre>
+
+<h2 id="scenario">Scenario</h2>
+<p>The <code>scenario</code> object contains the actions that comprise a test. Note that actions and components are mutually exclusive: one or the other must be present.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Unique scenario identifier.</td>
+</tr>
+<tr>
+<td><code>keepalive</code></td>
+<td>boolean</td>
+<td>No</td>
+<td>No</td>
+<td>Indicates whether a user must be kept alive between scenario executions. A value of ‘true’ will keep those processes running and all the established connections opened; the <code>init</code> section will be executed only once, when the connection is established. If the value is ‘false’, user instances will be terminated each time the scenario is executed and the connection reopened.</td>
+</tr>
+<tr>
+<td><code>actions</code></td>
+<td>ne-list of objects</td>
+<td>Yes</td>
+<td>No</td>
+<td>List of actions that will be executed in sequence in this scenario. See <a href="../actions/">Actions</a>.</td>
+</tr>
+<tr>
+<td><code>components</code></td>
+<td>ne-list of strings</td>
+<td>Yes</td>
+<td>No</td>
+<td>List of scenario IDs. You can compose complex scenarios from simple ones, by appending the list of actions to those scenarios.</td>
+</tr>
+<tr>
+<td><code>init</code></td>
+<td>ne-list of strings</td>
+<td>No</td>
+<td>No</td>
+<td>List of scenario IDs. An init scenario is a special scenario; it cannot contain more init scenarios. These init scenarios, if any, are executed in sequential order and only once before any other action of the scenario.</td>
+</tr>
+<tr>
+<td><code>teardown</code></td>
+<td>ne-list of strings</td>
+<td>No</td>
+<td>No</td>
+<td>List of scenario IDs. These scenarios are executed in sequential order after every scenario has completed, unless the scenario has keepalive flag set to true. They are also executed at the end of a phase regardless of the keepalive flag.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="init">Init</h3>
+<p>The init scenarios are executed once at the beginning of the scenario execution. If the scenario is tagged as <em>keepalive</em>, the init scenario is not repeated with the scenario.</p>
+<p><img alt="" src="../images/scenario-false.png" />
+<img alt="" src="../images/scenario-true.png" /></p>
+<p>Any variable stored or state changed during the execution of the init scenario is available during the execution of the main scenario actions. The init scenario can be disrupted in the change of phase; Megaload does not wait for it to be finished before changing the phase.</p>
+<p>A basic scenario contains a list of actions that are executed in sequential order. Additionally, Megaload allows the user to generate more complex scenarios by using composition.</p>
+<p>There may be an arbitrary number of init scenarios within each scenario, which are executed in sequential order.</p>
+<h3 id="components">Components</h3>
+<!--FIXME – clarify the following:-->
+
+<p>A compound scenario does not contain <code>actions</code> but <code>components</code>. The parameter <code>components</code> is a list of scenario identifiers which actions are called in sequencial order in place of <code>actions</code>. All the parameters of the component scenarios, such as <code>keepalive</code> or <code>init</code>, are ignored during the test execution and only the parameters of the compound scenario are used. When the compound scenario has <code>keepalive</code> set to <code>true</code>, the whole sequence of actions is repeated until the phase ends. </p>
+<p><img alt="" src="../images/scenario_c_false.png" />
+<img alt="" src="../images/scenario_c_true.png" /></p>
+<h3 id="example_3">Example</h3>
+<pre><code class="json">{&quot;scenario&quot; : {
+                &quot;id&quot; : &quot;scenario&quot;,
+                &quot;init&quot; : [&quot;init-scenario-1&quot;, &quot;init-scenario-2&quot;],
+                &quot;actions&quot; : [ {&quot;http-request&quot; : {
+                                                  &quot;plugin_id&quot; : &quot;localhost&quot;,
+                                                  &quot;method&quot; : &quot;GET&quot;,
+                                                  &quot;path&quot; : &quot;/charges&quot;,
+                                                  &quot;headers&quot; : {},
+                                                  &quot;body&quot; : []
+                                                }
+                              }
+                            ]
+              }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../examples/" class="btn btn-neutral float-right" title="Examples"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../test_write/" class="btn btn-neutral" title="Writing a Megaload test"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../test_write/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../examples/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

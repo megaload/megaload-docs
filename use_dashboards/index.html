@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Megaload UI - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "The Megaload UI";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">The Megaload UI</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#getting-to-know-the-megaload-ui">Getting to know the Megaload UI</a></li>
+                
+                    <li><a class="toctree-l4" href="#load-testing-dashboard">Load testing dashboard</a></li>
+                
+                    <li><a class="toctree-l4" href="#monitoring-dashboard">Monitoring dashboard</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Megaload &raquo;</li>
+        
+      
+    
+    <li>The Megaload UI</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="getting-to-know-the-megaload-ui">Getting to know the Megaload UI</h1>
+<p>To access Megaload browser-based user interface, go to <code>http://&lt;EC2_Instance_Public_DNS&gt;:8080/megaload/index.html</code>.</p>
+<p>Megaload has two dashboards, one for <strong>managing and running load tests</strong>, and one for <strong>monitoring and viewing metrics</strong>. To switch between them, click the menu item on the right:</p>
+<table class="">
+  <tr>
+    <td class="ui-text" style="font-size: 12pt; vertical-align:top; white-space:nowrap;">
+      <img src="../images/glyphicons-518-option-vertical.png" style="height:12pt !important; margin:-3pt 3pt 0 0;">&nbsp;
+      Load testing
+      <img src="../images/glyphicons-223-share.png" style="height:10pt !important; margin:-5pt 0 0 2pt;"></td>
+    <td>
+      <ul style="margin-bottom:0;">
+        <li>View the load generators and information about the load engines</li>
+        <li>Load test: upload, edit and run test cases; view the load report</li>
+        <li>Property-based testing: upload and run properties, and view live results</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="ui-text" style="font-size: 12pt; vertical-align:top; white-space:nowrap;">
+      <img src="../images/glyphicons-518-option-vertical.png" style="height:12pt !important; margin:-3pt 6pt 0 0;">
+      Monitoring
+      <img src="../images/glyphicons-223-share.png" style="height:10pt !important; margin:-5pt 0 0 2pt;"></td>
+    </td>
+    <td>
+      <ul style="margin-bottom:0;">
+        <li>View metrics, including counters and histograms</li>
+        <li>View and manage notifications and logs</li>
+        <!--li>Manage the infrastructure and nodes (Orchestration)</li-->
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<h2 id="load-testing-dashboard">Load testing dashboard</h2>
+<p>The primary navigation bar provides three main menus, <strong>Load generators</strong>, <strong>Load test</strong>, and <strong>Property-based testing</strong>.</p>
+<h3 id="load-generators">Load generators</h3>
+<p>The <strong>Load generators</strong> page shows the Megaload instances that have been deployed. In the following example there is one Megaload generator, <strong>Megaload 1.0.1</strong>, which consists of one load engine (Megaload node).</p>
+<p><img alt="" src="../images/main-page.png" /></p>
+<h3 id="load-test">Load test</h3>
+<p>The Load test page provides all the functionality required to upload and run tests.</p>
+<ul>
+<li><strong>Upload test cases</strong>: Upload test specifications and any additional data. Additional data might be a CSV file that contains usernames and passwords to connect to a specific HTTP server.</li>
+<li><strong>Edit test cases</strong>: A JSON test editor that does basic syntactic checks to help you write test specifications.</li>
+<li><strong>Escript test</strong>: Upload Escript test specifications.</li>
+<li><strong>Runner</strong>: Start and stop tests.</li>
+<li><strong>Load report</strong>: A summary of the test being executed. There are six sections: Status, Assertions, Assertion details, Response time, Rate, and Statistics.</li>
+</ul>
+<!--
+### Property-based testing
+
+Manage your property-based testing. You can upload and run properties, and view and download the results.
+-->
+
+<h3 id="monitoring">Monitoring</h3>
+<p>To leave the load testing dashboard and go to the monitoring dashboard, click <strong>Monitoring</strong> on the right.</p>
+<h2 id="monitoring-dashboard">Monitoring dashboard</h2>
+<h3 id="overview-page">Overview page</h3>
+<p>When you open Monitoring you see an overview page, which you can customise by adding panels that show metrics, histograms, alarms, or node statistics. See <a href="#fixme">link</a>.</p>
+<h3 id="metrics">Metrics</h3>
+<p>You can view aggregated metrics for the load generator, or metrics for each individual load engine.</p>
+<ul>
+<li><strong>Collected metrics</strong>: View counters and system usage for the load generator, and counters and histograms for each of the load engines.
+<!--Gauges: View system metrics such as total_memory as gauges.--></li>
+<li><strong>Live metrics</strong>: View counters and system usage in real time.</li>
+</ul>
+<h3 id="notifications">Notifications</h3>
+<p>View log entries from the different load engines. The logs are provided by two different components: <code>error_logger</code> and <code>lager</code>. You can filter by application, search in logs, and change the log level for individual load engines.</p>
+<p>Notifications are useful for troubleshooting purposes, but do not provide information about sucessful load tests. </p>
+<!--
+### Orchestration
+* Infrastructure providers: Amazon EC2, HP Cloud, Rackspace Cloud, or a physical provider
+* Releases
+* Node Families
+* Nodes
+-->
+
+<h3 id="load-testing">Load testing</h3>
+<p>To leave the monitoring dashboard and go to the load testing dashboard, click <strong>Load testing</strong> on the right.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../use_load_testing/" class="btn btn-neutral float-right" title="Load testing"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../qs_full/" class="btn btn-neutral" title="Quick start"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../qs_full/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../use_load_testing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

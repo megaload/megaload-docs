@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Assertions - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Assertions";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Assertions</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#assertions">Assertions</a></li>
+                
+                    <li><a class="toctree-l4" href="#counter">Counter</a></li>
+                
+                    <li><a class="toctree-l4" href="#histogram">Histogram</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Test elements &raquo;</li>
+        
+      
+    
+    <li>Assertions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="assertions">Assertions</h1>
+<p>Assertions are used to check whether test results comply with expectations. they can be included in a test or in a phase specification. Both phase assertion and a test assertion is a list of of <code>assert-counter</code> and <code>assert-histogram</code> assertions. All of them must be successful for the test or phase to pass.</p>
+<p>When assertions are included in a test specification, the histograms used are the representation of the specified metric for the whole test. When assertions are included in a phase specification, the histograms used are the representation of the specified metric for that single phase.</p>
+<h2 id="counter">Counter</h2>
+<p>The <code>assert-counter</code> action does a check on the value of the specified counter.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter name as described in <a href="../counters/">Counters</a>.</td>
+</tr>
+<tr>
+<td><code>metric</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Takes the value <code>percent</code> or <code>count</code>. Defines if the assertion is done regarding the counter value or the percentage it represents over the total of requests.</td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td><code>filter object</code></td>
+<td>Yes</td>
+<td>No</td>
+<td>Filter to assert the success of the test. A filter is a single condition. Applied over the choice of <code>metric</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>filter</code> object can use one of the following conditions:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lte</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value less than or equal to <code>lte</code> value.</td>
+</tr>
+<tr>
+<td><code>lt</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value less than <code>lt</code> value.</td>
+</tr>
+<tr>
+<td><code>gte</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value greather than or equal to <code>gte</code> value.</td>
+</tr>
+<tr>
+<td><code>gt</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value greather than <code>gt</code> value.</td>
+</tr>
+<tr>
+<td><code>eq</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value is equal to <code>eq</code> value.</td>
+</tr>
+<tr>
+<td>\end{tcolorbox}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<pre><code class="json">{&quot;assert-counter&quot; : {&quot;id&quot; : &quot;http_counter_responseCode_200_localhost&quot;,
+                     &quot;metric&quot; : &quot;percent&quot;,
+                     &quot;filter&quot; : {&quot;lte&quot; : 75}
+                    }
+}
+</code></pre>
+
+<h2 id="histogram">Histogram</h2>
+<p>The <code>assert-histogram</code> action does a check on the collection of values in a histogram.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Histogram name as described in chapter <a href="../counters/">Counters</a>.</td>
+</tr>
+<tr>
+<td><code>statistic</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>No</td>
+<td>Defines the statistic on which to apply the filter. Values in: <code>min</code>, <code>max</code>, <code>mean</code>, <code>median</code>, <code>percentile50</code>, <code>percentile75</code>, <code>percentile90</code>, <code>percentile95</code>, <code>percentile99</code>, <code>percentile999</code>.</td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td><code>filter object</code></td>
+<td>Yes</td>
+<td>No</td>
+<td>Filter to assert the success of the test. A filter is a single condition. Applied over the choice of <code>statistic</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>filter</code> object:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Action</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lte</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value less than or equal to <code>lte</code> value.</td>
+</tr>
+<tr>
+<td><code>lt</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value less than <code>lt</code> value.</td>
+</tr>
+<tr>
+<td><code>gte</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value greather than or equal to <code>gte</code> value.</td>
+</tr>
+<tr>
+<td><code>gt</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value greather than <code>gt</code> value.</td>
+</tr>
+<tr>
+<td><code>eq</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Counter value is equal to <code>eq</code> value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1">Example</h3>
+<pre><code class="json">{&quot;assert-histogram&quot; : {&quot;id&quot; : &quot;http_counter_responseTime&quot;,
+                       &quot;statistic&quot; : &quot;mean&quot;,
+                       &quot;filter&quot; : {&quot;lt&quot; : 3000}
+                    }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../counters/" class="btn btn-neutral float-right" title="Counters"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../actions/" class="btn btn-neutral" title="Actions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../actions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../counters/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

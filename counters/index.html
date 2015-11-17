@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Counters - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Counters";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Counters</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#counters">Counters</a></li>
+                
+                    <li><a class="toctree-l4" href="#predefined-counters">Predefined counters</a></li>
+                
+                    <li><a class="toctree-l4" href="#custom-counters">Custom counters</a></li>
+                
+                    <li><a class="toctree-l4" href="#predefined-gauges">Predefined gauges</a></li>
+                
+                    <li><a class="toctree-l4" href="#predefined-histograms">Predefined histograms</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Test elements &raquo;</li>
+        
+      
+    
+    <li>Counters</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="counters">Counters</h1>
+<p>Megaload retrieves all counters and histograms, displaying them in the real-time web dashboard.
+Counters are also used in test and phase assertions to validate the success of the test. A counter can be used in an assertion as the counter value or as a percentage over the total of requests <code>global_totalRequests</code>.</p>
+<h2 id="predefined-counters">Predefined counters</h2>
+<h3 id="global-counters">Global counters</h3>
+<p>Global counters keep track of totals or actuals, including all servers and protocols.</p>
+<p><strong>global_counter_users</strong><br />
+The total running virtual users.<br />
+A virtual user is an instance of a plugin, which can have one or several connections to a server. This counter reports the current total; at the end of the test it resets to 0.<br />
+Note that each scenario can run several virtual users in parallel, either by starting several plugins or plugins with several connections. Thus, <code>global_counter_users</code> may be larger than <code>global_counter_scenarios</code>.</p>
+<p><a id="metric:actual_workers"></a>
+<strong>global_counter_scenarios</strong><br />
+Number of concurrent scenarios.</p>
+<p><strong>global_counter_totalRequests</strong><br />
+Number of requests sent since the start of the test.</p>
+<p><strong>global_counter_successfulRequests</strong>
+Number of successful requests sent since the start of the test.</p>
+<p><strong>global_counter_failedRequests</strong><br />
+Number of failed requests sent since the start of the test.</p>
+<p><strong>global_counter_invalidRequests</strong><br />
+Number of invalid requests generated since the start of the test. A request is invalid if it fails before being sent, that is, it is not well-formed. Invalid requests do not increase the counters of total or failed requests.</p>
+<p><strong>global_counter_initSections</strong><br />
+Number of init sections executed since the start of the test.</p>
+<p><strong>global_counter_teardownSections</strong><br />
+Number of teardown sections executed since the start of the test.</p>
+<p><strong>global_counter_scenario_&lt;id&gt;</strong><br />
+Number of running scenarios of type <code>&lt;id&gt;</code>.</p>
+<p><strong>global_counter_totalScenarios_&lt;id&gt;</strong><br />
+Number of scenarios of type <code>&lt;id&gt;</code> executed started since the start of the test.</p>
+<p><strong>global_counter_abortedScenarios</strong><br />
+Number of scenarios which have been aborted since the start of the test.</p>
+<p><strong>global_counter_abortedScenarios_&lt;id&gt;</strong><br />
+Number of scenarios of type <code>&lt;id&gt;</code> which have been aborted since the start of the test.</p>
+<p><img alt="Global counters" src="../init-component/global-counters.png" /></p>
+<h3 id="http-counters">HTTP counters</h3>
+<!-- %% Break lines on '_' Useful for counters!
+{{\ttfamily \hyphenchar\the\font=`_}% -->
+
+<p>The following counters are specific to the HTTP protocol.</p>
+<p><strong>http_counter_responseSize</strong><br />
+Total bytes of data received by the HTTP protocol from all servers since the start of the test.</p>
+<p><strong>http_counter_responseCode_&lt;code&gt;_&lt;host&gt;</strong><br />
+Number of HTTP responses with code <code>&lt;code&gt;</code> from host <code>&lt;host&gt;</code> since the start of the test.</p>
+<p><strong>http_counter_connectionRefused_&lt;host&gt;</strong><br />
+Number of connections refused by host <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>global_failedRequests</code>.</p>
+<p><strong>http_counter_connectionTimeout_&lt;host&gt;</strong><br />
+Number of connections timeout by host <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>global_failedRequests</code>.</p>
+<p><strong>http_counter_connectionError_&lt;host&gt;</strong><br />
+Number of connections failed with a reason different from timeout or refused by host <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>global_failedRequests</code>.</p>
+<p><strong>http_counter_timeoutRequests_&lt;host&gt;</strong><br />
+Number of requests timed out by host <code>&lt;host&gt;</code> since the start of the test. This counter is the addition of <code>http_timeoutRequests_&lt;host&gt;_&lt;uri&gt;</code> counters, if present. These requests are counted in <code>global_failedRequests</code>.</p>
+<p><strong>http_counter_timeoutRequests_&lt;host&gt;_&lt;uri&gt;</strong><br />
+(Optional) Number of requests to URI <code>&lt;uri&gt;</code> timed out by host <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>http_timeoutRequests_&lt;host&gt;</code>.<br />
+Note: <code>uri</code> is the request path if the plugin is configured with the option <code>stats_per_url</code>.</p>
+<p><strong>http_counter_timeoutRequests_&lt;host&gt;_&lt;group&gt;</strong><br />
+(Optional) Number of requests tagged with the group <code>&lt;group&gt;</code> and timed out by host <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>http_timeoutRequests_&lt;host&gt;</code>.<br />
+Note: <code>&lt;group&gt;</code> is the parameter <code>group</code> of the request.</p>
+<p><strong>http_counter_successfulRequests_&lt;host&gt;</strong><br />
+Number of successful requests to host <code>&lt;host&gt;</code> since the start of the test. This counter is the addition of <code>http_successfulRequests_&lt;host&gt;_&lt;uri&gt;</code> counters, if present. These requests are counted in <code>global_successfulRequests</code>.<br />
+Note: A request is successful if it returns a syntactically valid HTTP response and its body and status assertions validate to true, in case such assertions exist. Any syntactically valid HTTP response without assertions is considered successful.</p>
+<p><strong>http_counter_successfulRequests_&lt;host&gt;_&lt;uri&gt;</strong><br />
+(Optional) Number of successful requests to URI <code>uri</code> and host <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>http_successfulRequests_&lt;host&gt;</code>.<br />
+Note: A request is successful if it returns a syntactically valid HTTP response and its body and status assertions validate to true or are undefined.<br />
+Note: <code>uri</code> is the request path if the plugin is configured with the option <code>stats_per_url</code>.</p>
+<p><strong>http_counter_successfulRequests_&lt;host&gt;_&lt;group&gt;</strong><br />
+(Optional) Number of successful requests tagged with the group <code>group</code> to <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>http_successfulRequests_&lt;host&gt;</code>.<br />
+Note: A request is successful if it returns a syntactically valid HTTP response and its body and status assertions validate to true or are undefined.<br />
+Note: <code>&lt;group&gt;</code> is the parameter <code>group</code> of the request.</p>
+<p><strong>http_counter_failedRequests_&lt;host&gt;</strong><br />
+Number of failed requests to host <code>&lt;host&gt;</code> since the start of the test. This counter is the addition of <code>http_failedRequests_&lt;host&gt;_&lt;uri&gt;</code> counters, if present. These requests are counted in <code>global_failedRequests</code>.<br />
+Note: A request is failed if it returns a syntactically valid HTTP response and its body or status assertions validate to false, in case such assertions exist.</p>
+<p><strong>http_counter_failedRequests_&lt;host&gt;_&lt;uri&gt;</strong><br />
+(Optional) Number of failed requests to URI <code>uri</code> and host <code>&lt;host&gt;</code> since the start of the test. These requests are counted as <code>http_failedRequests_&lt;host&gt;</code>.<br />
+Note: A request is failed if it returns a syntactically valid HTTP response and its body or status assertions validate to false.<br />
+Note: <code>uri</code> is the request path if the plugin is configured with the option <code>statss_per_url</code>. <!-- FIXME: check sp. "statss" --></p>
+<p><strong>http_counter_failedRequests_&lt;host&gt;_&lt;group&gt;</strong><br />
+(Optional) Number of failed requests tagged with the group <code>&lt;group&gt;</code> to host <code>&lt;host&gt;</code> since the start of the test. These requests are counted as <code>http_failedRequests_&lt;host&gt;</code>.<br />
+Note: A request is failed if it returns a syntactically valid HTTP response and its body or status assertions validate to false.<br />
+Note: <code>&lt;group&gt;</code> is the parameter <code>group</code> of the request.</p>
+<p><strong>http_counter_errorRequests_&lt;host&gt;</strong><br />
+Number of error requests to host <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>global_failedRequests</code>.<br />
+Note: A request is counted as an error if the HTTP response is syntactically invalid or the server connection returns an error different from connection refused or connection timeout.</p>
+<p><strong>http_counter_errorRequests_&lt;host&gt;_&lt;uri&gt;</strong><br />
+(Optional) Number of error requests to URI <code>uri</code> and host <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>http_errorRequests_&lt;host&gt;</code>.<br />
+Note: A request is counted as an error if the HTTP response is syntactically invalid or the server connection returns an error different from connection refused or connection timeout.<br />
+Note: <code>uri</code> is the request path if the plugin is configured with the option <code>stats_per_url</code>.</p>
+<p><strong>http_counter_errorRequests_&lt;host&gt;_&lt;group&gt;</strong><br />
+(Optional) Number of error requests tagged with the group <code>&lt;group&gt;</code> from host <code>&lt;host&gt;</code> since the start of the test. These requests are counted in <code>http_errorRequests_host</code>.<br />
+Note: A request is counted as an error if the HTTP response is syntactically invalid or the server connection returns an error different from connection refused or connection timeout.<br />
+Note: <code>&lt;group&gt;</code> is the parameter <code>group</code> of the request.</p>
+<p><img alt="HTTP global counters" src="../init-component/HTTP-global-counters.png" /></p>
+<h2 id="custom-counters">Custom counters</h2>
+<p>Counters defined by the users in the test specification can be used in assertions. It is currently not possible to define user histograms.</p>
+<p>See actions <code>counter-new</code>, <code>counter-inc</code>, <code>counter-value</code>.</p>
+<p><strong>custom_counter_&lt;counter&gt;</strong><br />
+Custom counter defined in the test specification</p>
+<h2 id="predefined-gauges">Predefined gauges</h2>
+<p>The gauges defined in Megaload provide information about the system itself. They report useful information as the targets for each node or current workload. Sometimes, the test targets may not be meet due to the response of the SUT, but in other cases it will be required to scale up Megaload.
+Gauges provide an insight on Megaload itself.</p>
+<h3 id="global-gauges">Global gauges</h3>
+<p><strong>global_gauge_maxRate</strong><br />
+Live local target rate.<br />
+Set based on the target specified in the phase -- if the test is specified as JSON -- or based on the local load regulation mechanism -- if the test is specified as Escript.<br />
+See <a href="#metric:actual_rate"><code>global_histogram_requestsPerSecond</code></a> for the local actual rate.</p>
+<p><strong>global_gauge_maxWorkers</strong><br />
+Live local target (max) number of workers (scenarios).<br />
+Set based on the target specified in the phase -- if the test is specified as JSON -- or based on the local load regulation mechanism -- if the test is specified as Escript.<br />
+See <a href="#metric:actual_workers"><code>global_counter_scenarios</code></a> for the local actual number of workers.</p>
+<p><strong>global_gauge_phaseRate</strong><br />
+Target rate from the current phase.</p>
+<p><strong>global_gauge_phaseWorkers</strong><br />
+Target number of workers (scenarios) from the current phase.</p>
+<p><strong>global_gauge_phaseRatePerc</strong><br />
+Percentage of the rate specified in the phase that must be fulfilled by the node.</p>
+<p><strong>global_gauge_phaseWorkersPerc</strong><br />
+Percentage of the concurrent scenarios specified in the phase that must be fulfilled by the node.</p>
+<h3 id="system-monitoring">System monitoring</h3>
+<!-- FIXME: empty section? -->
+
+<h2 id="predefined-histograms">Predefined histograms</h2>
+<p>Histograms provide statistical information about a value: <strong>min</strong>, <strong>max</strong>, <strong>mean</strong>, <strong>median</strong>, <strong>percentile 50</strong>, <strong>percentile 75</strong>, <strong>percentile 90</strong>, <strong>percentile 95</strong>, <strong>percentile 99</strong>, <strong>percentile 999</strong>.</p>
+<p>The histograms described in the following subsections report instant values, that is, the histogram for the last 60 seconds. These histograms allow you to monitor very precisely the evolution of the test in execution through the web interface, with the visualization of individual parameters as min, max or means.</p>
+<p>Histograms are used in phase assertions and test assertions to validate the success of the test.
+In order to allow these verifications, there are some special histograms for response times and rate of requests, which provide the response time for the whole of the test or phase.<br />
+Test and phase histograms are displayed in Megaload-UI, preceded by the tags <code>test_</code> or <code>phase_</code>.</p>
+<h3 id="global-histograms">Global histograms</h3>
+<!-- %% Break lines on '_' Useful for counters!
+{{\ttfamily \hyphenchar\the\font=`_}% -->
+
+<p><a id="metric:actual_rate"></a>
+<strong>global_histogram_requestsPerSecond</strong><br />
+Rate of requests per second. Reports the statistics for the last 60 seconds of testing. Includes all servers and protocols.<br />
+Test and phase histograms are available as <code>test_global_histogram_requestsPerSecond</code> and <code>phase_global_histogram_requestsPerSecond</code>.</p>
+<p><strong>global_histogram_unsatisfiedRps</strong><br />
+P0ercentage of the target rate that is not fulfilled by the node.</p>
+<h3 id="http-histograms">HTTP histograms</h3>
+<!-- %% Break lines on '_' Useful for counters!
+{{\ttfamily \hyphenchar\the\font=`_}% -->
+
+<p><strong>http_histogram_responseSize_&lt;host&gt;</strong><br />
+Bytes of data received per response from host since the start of the test. Reports the statistics for the last 60 seconds of testing.<br />
+Test and phase histograms are available as <code>test_http_histogram_responseSize_&lt;host&gt;</code> and <code>phase_http_histogram_responseSize_&lt;host&gt;</code></p>
+<p><strong>http_counter_responseTime</strong><br />
+Response time in microseconds per request since the start of the test.<br />
+Test and phase histograms are available as <code>test_http_histogram_responseTime</code> and <code>phase_http_histogram_responseTime</code>.<br />
+This histogram is the aggregation of <code>http_responseTime_&lt;host&gt;</code>.</p>
+<p><strong>http_counter_responseTime_&lt;host&gt;</strong><br />
+Response time in microseconds per request to <code>&lt;host&gt;</code> since the start of the test.<br />
+Test and phase histogram are available as <code>test_http_histogram_responseTime_&lt;host&gt;</code> and <code>phase_http_histogram_responseTime_&lt;host&gt;</code>.</p>
+<p><strong>http_counter_responseTime_&lt;host&gt;</strong><br />
+(Optional) Response time in microseconds per request to URI <code>&lt;uri&gt;</code> and <code>&lt;host&gt;</code> since the start of the test.<br />
+Note: uri is the request path if the plugin is configured with the option texttt{stats_per_url}.</p>
+<p><strong>http_counter_responseTime_&lt;host&gt;_&lt;group&gt;</strong><br />
+Response time in microseconds per request tagged with group <code>&lt;group&gt;</code> to <code>&lt;host&gt;</code> since the start of the test.<br />
+Note: uri is the request path if the plugin is configured with the option texttt{stats_per_url}.</p>
+<p><strong>http_histogram_connectionTime_&lt;host&gt;</strong><br />
+Connection time in microseconds to <host> since the start of the test. Reports the statistics for the last 60 seconds of testing.<br />
+Test and phase histogram are available as <code>test_http_histogram_connectionTime_&lt;host&gt;</code> and <code>phase_http_histogram_connectionTime_&lt;host&gt;</code></p>
+<p><strong>http_histogram_connectionTime</strong><br />
+Connection time in microseconds to each server since the start of the test. Reports the statistics for the last 60 seconds of testing.<br />
+Test and phase histogram are available as <code>test_http_histogram_connectionTime</code> and <code>phase_http_histogram_connectionTime</code> <br />
+This histogram is the aggregation of <code>http_connectionTime_&lt;host&gt;</code>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../action_time/" class="btn btn-neutral float-right" title="Time"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../assertions/" class="btn btn-neutral" title="Assertions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../assertions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../action_time/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

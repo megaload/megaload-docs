@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Examples - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Examples";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Examples</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#examples">Examples</a></li>
+                
+                    <li><a class="toctree-l4" href="#http">HTTP</a></li>
+                
+                    <li><a class="toctree-l4" href="#xmpp">XMPP</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Tests &raquo;</li>
+        
+      
+    
+    <li>Examples</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="examples">Examples</h1>
+<h2 id="http">HTTP</h2>
+<pre><code class="json">[{&quot;test&quot; : {&quot;id&quot; : &quot;payment-test&quot;,
+            &quot;phases&quot; : [&quot;payment-phase&quot;],
+            &quot;plugins&quot; : [&quot;payment-server&quot;]
+           }},
+
+ {&quot;plugin&quot; : {&quot;id&quot; : &quot;payment-server&quot;,
+              &quot;plugin_info&quot; 
+              : {&quot;http-plugin&quot; : {&quot;servers&quot; : [{&quot;host&quot; : &quot;10.100.0.120&quot;,
+                                                &quot;port&quot; : 5050,
+                                                &quot;ssl&quot; : false}
+                                              ]
+                                 }
+                }
+             }
+ },
+
+ {&quot;phase&quot; : {&quot;id&quot; : &quot;payment-phase&quot;,
+             &quot;arrival_rate&quot; : 10,
+             &quot;duration&quot; : 600000,
+             &quot;concurrent_scenarios&quot; : 250,
+             &quot;rate&quot; : 500,
+             &quot;scenarios&quot; : [{&quot;payment-scenario&quot; : 1}]}},
+
+ {&quot;scenario&quot; :
+  {&quot;id&quot; : &quot;payment-scenario&quot;,
+   &quot;actions&quot; : [ 
+       {&quot;data-csv&quot; : {&quot;file&quot; : &quot;users_list.csv&quot;,
+                      &quot;name&quot; : &quot;all_users&quot;
+                     }
+       },
+       {&quot;data-csv_value&quot; : {&quot;name&quot; : &quot;all_users&quot;,
+                            &quot;fields&quot; : [1, 2],
+                            &quot;vars&quot; : [&quot;username&quot;, &quot;password&quot;]
+                           }
+       },
+       {&quot;http-request&quot; : {&quot;plugin_id&quot; : &quot;payment-server&quot;,
+                          &quot;method&quot; : &quot;POST&quot;,
+                          &quot;path&quot; : &quot;/shop/session&quot;,
+                          &quot;body&quot; : {&quot;jsonpath-multiset&quot; :
+                                {
+                                  &quot;object&quot; :
+                                       &quot;{\&quot;username\&quot;: \&quot;user\&quot;,
+                                         \&quot;password\&quot;: \&quot;password\&quot;}&quot;,
+                                  &quot;pairs&quot; : [
+                                      {&quot;value&quot; : {&quot;var-get&quot; : {&quot;name&quot; : &quot;username&quot;}},
+                                       &quot;path&quot; : &quot;username&quot;},
+                                      {&quot;value&quot; : {&quot;var-get&quot; : {&quot;name&quot; : &quot;password&quot;}},
+                                       &quot;path&quot; : &quot;password&quot;}
+                                  ]
+                                }
+                                  }
+                         }
+       },
+       {&quot;jsonpath-get&quot; : {&quot;path&quot; : &quot;headers.location&quot;,
+                          &quot;variable&quot; : &quot;shoppingSession&quot;
+                         }
+       },
+       {&quot;http-request&quot; : {&quot;plugin_id&quot; : &quot;payment-server&quot;,
+                          &quot;method&quot; : &quot;GET&quot;,
+                          &quot;path&quot; : {&quot;var-get&quot; : {&quot;name&quot; :
+                                                 &quot;shoppingSession&quot;}}
+                         }
+       },
+       {&quot;http-request&quot; : {&quot;plugin_id&quot; : &quot;payment-server&quot;,
+                          &quot;method&quot; : &quot;GET&quot;,
+                          &quot;path&quot; : {&quot;url-join&quot; :
+                                      { &quot;root&quot; : &quot;/shop/user&quot;,
+                                        &quot;path&quot; : {&quot;var-get&quot; : {&quot;name&quot; : &quot;username&quot;}
+                                                 }
+                                      }
+                                   }
+                         }
+       },
+       {&quot;http-request&quot; : {&quot;plugin_id&quot; : &quot;payment-server&quot;,
+                          &quot;method&quot; : &quot;POST&quot;,
+                          &quot;path&quot; : &quot;/shop/basket/sonyDSCW800compactdigitalcamera&quot;,
+                          &quot;body&quot; : &quot;{\&quot;price\&quot;: {\&quot;amount\&quot; : 59,
+                                                 \&quot;currency\&quot;: \&quot;GBP\&quot;}}&quot;
+                         }
+       },
+       {&quot;jsonpath-get&quot; : {&quot;path&quot; : &quot;headers.location&quot;,
+                          &quot;variable&quot; : &quot;productDetails&quot;
+                         }
+       },
+       {&quot;http-request&quot; : {&quot;plugin_id&quot; : &quot;payment-server&quot;,
+                          &quot;method&quot; : &quot;GET&quot;,
+                          &quot;path&quot; : {&quot;var-get&quot; : {&quot;name&quot; : &quot;productDetails&quot;}}
+                         }
+       },    
+       {&quot;http-request&quot; : {&quot;plugin_id&quot; : &quot;payment-server&quot;,
+                          &quot;method&quot; : &quot;GET&quot;,
+                          &quot;path&quot; : &quot;/shop/payment&quot;
+                         }
+       },
+       {&quot;jsonpath-get&quot; : {&quot;path&quot; : &quot;body.payment_methods[0].uri&quot;,
+                          &quot;variable&quot; : &quot;paymentMethod&quot;
+                         }
+       },
+       {&quot;http-request&quot; : {&quot;plugin_id&quot; : &quot;payment-server&quot;,
+                          &quot;method&quot; : &quot;POST&quot;,
+                          &quot;path&quot; : {&quot;var-get&quot; : {&quot;name&quot; : &quot;paymentMethod&quot;}},
+                          &quot;body&quot; : &quot;{\&quot;amount\&quot; : 59, \&quot;currency\&quot; : \&quot;GBP\&quot;,
+                                     \&quot;security_code\&quot; : \&quot;123\&quot;}&quot;
+                         }
+       }
+   ]}}
+]
+</code></pre>
+
+<h2 id="xmpp">XMPP</h2>
+<pre><code>#!/usr/bin/env escript
+
+%% Adapted from https://github.com/esl/amoc
+
+-include_lib(&quot;exml/include/exml.hrl&quot;).
+
+%% ===================================================================
+-define(HOST, &lt;&lt;&quot;localhost&quot;&gt;&gt;). %% The virtual host served by the server
+-define(SERVER_IPS, {&lt;&lt;&quot;127.0.0.1&quot;&gt;&gt;}). %% Tuple of servers, for example {&lt;&lt;&quot;10.100.0.21&quot;&gt;&gt;, &lt;&lt;&quot;10.100.0.22&quot;&gt;&gt;}
+-define(CHECKER_SESSIONS_INDICATOR, 10). %% How often a checker session should be generated
+-define(SLEEP_TIME_AFTER_SCENARIO, 10000). %% wait 10s after scenario before disconnecting
+-define(NUMBER_OF_PREV_NEIGHBOURS, 4).
+-define(NUMBER_OF_NEXT_NEIGHBOURS, 4).
+-define(NUMBER_OF_SEND_MESSAGE_REPEATS, 73).
+-define(SLEEP_TIME_AFTER_EVERY_MESSAGE, 20000).
+
+
+%% ===================================================================
+%% Counters and histograms
+-define(MESSAGES_CT, [&lt;&lt;&quot;xmpp&quot;&gt;&gt;, &lt;&lt;&quot;counter&quot;&gt;&gt;, &lt;&lt;&quot;messages_sent&quot;&gt;&gt;]).
+-define(MESSAGE_TTD_H, [&lt;&lt;&quot;xmpp&quot;&gt;&gt;, &lt;&lt;&quot;histogram&quot;&gt;&gt;, &lt;&lt;&quot;message_ttd&quot;&gt;&gt;]).
+-define(CONNECTION_CT, [&lt;&lt;&quot;xmpp&quot;&gt;&gt;, &lt;&lt;&quot;counter&quot;&gt;&gt;, &lt;&lt;&quot;connections&quot;&gt;&gt;]).
+-define(CONNECTION_H, [&lt;&lt;&quot;xmpp&quot;&gt;&gt;, &lt;&lt;&quot;histogram&quot;&gt;&gt;, &lt;&lt;&quot;connection&quot;&gt;&gt;]).
+-define(CONNECTION_FAILURE_CT, [&lt;&lt;&quot;xmpp&quot;&gt;&gt;, &lt;&lt;&quot;counter&quot;&gt;&gt;, &lt;&lt;&quot;connection_failures&quot;&gt;&gt;]).
+
+
+%% ===================================================================
+%% Define initial values.
+%% The regulation will use the load_regulation_targets/2 callback afterwards
+-rate(150).
+-workers(100).
+-arrival_rate(20). %% Number of new scenarios started per second
+%% Set total of unique ids, will be split among nodes
+%% Used to generate the user ids later on. Retrieved from the process
+%% dictionary erlang:get(unique_id).
+-unique_ids(15000).
+%% ===================================================================
+
+main([]) -&gt;
+    MyId = erlang:get(unique_id),
+    Cfg = make_user(MyId, &lt;&lt;&quot;res1&quot;&gt;&gt;),
+
+    IsChecker = MyId rem ?CHECKER_SESSIONS_INDICATOR == 0,
+
+    {ConnectionTime, ConnectionResult} = timer:tc(escalus_connection, start, [Cfg]),
+    Client = case ConnectionResult of
+                 {ok, ConnectedClient, _, _} -&gt;
+                     loader_metrics:update_counter(?CONNECTION_CT, 1),
+                     loader_metrics:update_histogram(?CONNECTION_H, ConnectionTime),
+                     ConnectedClient;
+                 _Error -&gt;
+                     loader_metrics:update_counter(?CONNECTION_FAILURE_CT, 1),
+                     throw(abort_scenario)
+             end,
+
+    do(IsChecker, MyId, Client),
+
+    timer:sleep(?SLEEP_TIME_AFTER_SCENARIO),
+    send_presence_unavailable(Client),
+    escalus_connection:stop(Client).
+
+%% This callback may return a list of metrics to regulate the load.
+%% Otherwise, it's also useful to create all XMPP specific metrics.
+init_load_regulation_metrics() -&gt;
+    loader_metrics:new_counter(?MESSAGES_CT),
+    loader_metrics:new_histogram(?MESSAGE_TTD_H),
+    loader_metrics:new_counter(?CONNECTION_CT),
+    loader_metrics:new_counter(?CONNECTION_FAILURE_CT),
+    loader_metrics:new_histogram(?CONNECTION_H),
+    {ok, []}.
+
+%% Regulation callback. Megaload will use the number of workers and rate
+%% to set the maximum generated by the system. These could be capped lower
+%% if the machine is not able to cope with the amount of load.
+%% The gauges 'global_gauge_maxRate' and 'global_gauge_maxWorker' will show
+%% this capped limits in the UI.
+%% Megaload automatically regulates the number of workers, however the rate
+%% will depend on the scenario described in the escript. Regulation will
+%% only be triggered by short-lived scenarios.
+%% Nonetheless, this kind of example regulates the rate with its
+%% own timers, so built-in Megaload regulation would not be needed.
+load_regulation_targets(_Metrics,_OldTargets) -&gt;
+    NewTargets = {{workers, 1500}, {rate, 3000}},
+    {ok, NewTargets}.
+
+user_spec(ProfileId, Password, Res) -&gt;    
+    [ {username, ProfileId},
+      {server, ?HOST},
+      {host, pick_server(?SERVER_IPS)},
+      {password, Password},
+      {carbons, false},
+      {stream_management, false},
+      {resource, Res}
+    ].
+
+make_user(Id, R) -&gt;
+    BinId = integer_to_binary(Id),
+    ProfileId = &lt;&lt;&quot;user_&quot;, BinId/binary&gt;&gt;,
+    Password = &lt;&lt;&quot;password_&quot;, BinId/binary&gt;&gt;,
+    user_spec(ProfileId, Password, R).
+
+do(false, MyId, Client) -&gt;
+    escalus_connection:set_filter_predicate(Client, none),
+
+    send_presence_available(Client),
+    timer:sleep(5000),
+
+    NeighbourIds = lists:delete(MyId, lists:seq(max(1,MyId-?NUMBER_OF_PREV_NEIGHBOURS),
+                                                MyId+?NUMBER_OF_NEXT_NEIGHBOURS)),
+    send_messages_many_times(Client, ?SLEEP_TIME_AFTER_EVERY_MESSAGE, NeighbourIds);
+do(_Other, _MyId, Client) -&gt;
+    send_presence_available(Client),
+    receive_forever(Client).
+
+receive_forever(Client) -&gt;
+    Stanza = escalus_connection:get_stanza(Client, message, infinity),
+    Now = from_now(os:timestamp()),
+    case Stanza of
+        #xmlel{name = &lt;&lt;&quot;message&quot;&gt;&gt;, attrs=Attrs} -&gt;
+            case lists:keyfind(&lt;&lt;&quot;timestamp&quot;&gt;&gt;, 1, Attrs) of
+                {_, Sent} -&gt;
+                    TTD = (Now - binary_to_integer(Sent)),
+                    loader_metrics:update_histogram(?MESSAGE_TTD_H, TTD);
+                _ -&gt;
+                    ok
+            end;
+        _ -&gt;
+            ok
+    end,
+    receive_forever(Client).
+
+
+send_presence_available(Client) -&gt;
+    Pres = escalus_stanza:presence(&lt;&lt;&quot;available&quot;&gt;&gt;),
+    escalus_connection:send(Client, Pres).
+
+send_presence_unavailable(Client) -&gt;
+    Pres = escalus_stanza:presence(&lt;&lt;&quot;unavailable&quot;&gt;&gt;),
+    escalus_connection:send(Client, Pres).
+
+send_messages_many_times(Client, MessageInterval, NeighbourIds) -&gt;
+    S = fun(_) -&gt;
+                send_messages_to_neighbors(Client, NeighbourIds, MessageInterval)
+        end,
+    lists:foreach(S, lists:seq(1, ?NUMBER_OF_SEND_MESSAGE_REPEATS)).
+
+
+send_messages_to_neighbors(Client, TargetIds, SleepTime) -&gt;
+    [send_message(Client, make_jid(TargetId), SleepTime)
+     || TargetId &lt;- TargetIds].
+
+send_message(Client, ToId, SleepTime) -&gt;
+    MsgIn = make_message(ToId),
+    TimeStamp = integer_to_binary(from_now(os:timestamp())),
+    escalus_connection:send(Client, escalus_stanza:setattr(MsgIn, &lt;&lt;&quot;timestamp&quot;&gt;&gt;, TimeStamp)),
+    loader_metrics:update_counter(?MESSAGES_CT, 1),
+    %% Increases counters of total, successful requests and histograms of
+    %% requests per second. 
+    loader_requests:inc_successful(),
+    timer:sleep(SleepTime).
+
+make_message(ToId) -&gt;
+    Body = &lt;&lt;&quot;hello sir, you are a gentelman and a scholar.&quot;&gt;&gt;,
+    Id = escalus_stanza:id(),
+    escalus_stanza:set_id(escalus_stanza:chat_to(ToId, Body), Id).
+
+make_jid(Id) -&gt;
+    BinInt = integer_to_binary(Id),
+    ProfileId = &lt;&lt;&quot;user_&quot;, BinInt/binary&gt;&gt;,
+    Host = ?HOST,
+    &lt;&lt; ProfileId/binary, &quot;@&quot;, Host/binary &gt;&gt;.
+
+pick_server(Servers) -&gt;
+    S = size(Servers),
+    N = erlang:phash2(self(), S) + 1,
+    element(N, Servers).
+
+from_now({MegaSecs,Secs,Usecs}) -&gt;
+    (MegaSecs * 1000000 + Secs) * 1000000 + Usecs.
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../protocols/" class="btn btn-neutral float-right" title="Protocols"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../test_spec/" class="btn btn-neutral" title="Test specification"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../test_spec/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../protocols/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

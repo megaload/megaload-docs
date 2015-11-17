@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Escript test specification - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Escript test specification";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Escript test specification</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#escript">Escript</a></li>
+                
+                    <li><a class="toctree-l4" href="#model">Model</a></li>
+                
+                    <li><a class="toctree-l4" href="#test-specification">Test specification</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Escript &raquo;</li>
+        
+      
+    
+    <li>Escript test specification</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="escript">Escript</h1>
+<p>Megaload supports specifying tests by means of an Erlang Escript, as an alternative to JSON files, to test XMPP servers. Escript and JSON test specifications differ in the way they define the activities performed by each worker and in the target load model.</p>
+<p>The Escript test specification supported by Megaload is described below. The XMPP client used is the open source library <a href="https://github.com/esl/escalus">escalus</a>, developed by Erlang Solutions.</p>
+<p>An example is available in <a href="../examples/#xmpp">Examples</a>.</p>
+<h2 id="model">Model</h2>
+<p>The Escript must define:</p>
+<ul>
+<li>The function <code>main/1</code>, implementing the job each Megaload worker shall perform;</li>
+<li>Two callbacks related to updating the target load generated by the Megaload node hitting the system under test (SUT). The target load is modelled as target number of workers and target rate.</li>
+</ul>
+<p>The escript may define:</p>
+<ul>
+<li>The initial targets for the workers and rate.</li>
+<li>The arrival rate for all the test.</li>
+<li>The total number of unique ids generated by Megaload</li>
+</ul>
+<p>When instructed to start the load test, Megaload begins spawning short-lived workers -- each executing the <code>main/1</code> function, then dying.
+Megaload ends doing so only when instructed to stop the load test.</p>
+<p>Each Megaload node spawns new workers according to the local target number of workers, and throttles the invocations of the <code>main/1</code> function according to the local target rate.</p>
+<p>Each Megaload node periodically sets the local targets (i.e. target number of workers and target rate) to the values returned by the dedicated load regulation callback, capped in order not to exceed the configured memory and CPU usage limits (configuration parameters <code>mem_load_limit</code> and <code>cpu_load_limit</code> of the <code>loader_utils</code> application).</p>
+<h3 id="load-regulation-model">Load regulation model</h3>
+<!-- %% Source https://redmine.erlang-solutions.com/projects/megaloader/wiki/LoadRegulationProposal14084-20141209_/31#Design - with minor adaptations. -->
+
+<p>The load regulation sets local target load -- i.e. number of workers and rate -- for each Megaload node. On each Megaload node, local mechanisms enforce the local targets.</p>
+<p>The load regulation is per-node, i.e. each Megaload node decides the local targets independently from the other Megaload nodes in the cluster, based on custom SUT-related metrics.</p>
+<p>For the sake of simplicity, the workers arrival frequency experienced by the SUT in case of Megaload cluster with multiple Megaload nodes is a default value (hardcoded in Megaload) multiplied by the number of Megaload nodes. <!-- %% XXX Hardcoded workers arrival frequency is bad. --></p>
+<p>At the start of the test, each Megaload node invokes the specified initialization callback supposed to initialize the custom SUT-related metrics.</p>
+<p>During each phase, on each Megaload node, the load regulation periodically:</p>
+<ul>
+<li>Reads the custom SUT-related metrics;</li>
+<li>Invokes the specified regulation callback, that returns new local targets (from previous local targets and metrics values);</li>
+<li>Reads memory usage and CPU utilization;</li>
+<li>Computes and sets new local targets as returned by the regulation callback and capped by memory usage and CPU utilization.</li>
+</ul>
+<h2 id="test-specification">Test specification</h2>
+<h3 id="introduction">Introduction</h3>
+<p>In order to specify a valid test, the Escript has to define <code>main/1</code> and other two callbacks -- there is no need to export them.</p>
+<p>The following is a minimal template Escript:</p>
+<pre><code>#!/usr/bin/env escript
+
+main(_) -&gt;
+  %% Hit SUT.
+  %% Update request counters.
+  %% Update custom SUT-related actual metrics.
+  ok.
+
+init_load_regulation_metrics() -&gt;
+  %% Initialize target and actual custom SUT-related metrics.
+  InitializedMetrics = [...], %% Non-empty list here.
+  {ok, InitializedMetrics}.
+
+load_regulation_targets(_MetricsValues, OldTargets) -&gt;
+  %% Compute new targets.
+  NewTargets = OldTargets, %% Dummy logic.
+  {ok, NewTargets}.
+</code></pre>
+
+<p>In order to write the Escript, it may be useful relying on Erlang modules not released with plain Megaload. Refer to the Megaload installation guide for how to build a Megaload package with additional applications.</p>
+<p>During development and prototyping:</p>
+<ul>
+<li>The Escript can write entries in the Megaload custom log using the API in the <code>loader_custom_log</code> module. Such logging must be removed during the actual load testing of the SUT;</li>
+<li>You may prefer validating the Escript using <code>escript -s</code> (warnings can be ignored) before feeding Megaload with it.</li>
+</ul>
+<h3 id="job-performed-by-each-worker">Job performed by each worker</h3>
+<p>The Escript has to define the job to be performed by each worker in the <code>main/1</code> function.</p>
+<h4 id="main">Main</h4>
+<p>Hit the SUT, update request counters, update the custom SUT-related actual metrics (e.g. response time of the SUT) and return.</p>
+<h5 id="type">Type</h5>
+<pre><code>-callback main(any()) -&gt; ok.
+</code></pre>
+
+<h5 id="expected-behaviour">Expected behaviour</h5>
+<p>In order to update the request counters, use the Megaload API in the <code>loader_requests</code> module.</p>
+<p>In order to update the custom SUT-related actual metrics, use the Megaload API in the <code>loader_metrics</code> module.</p>
+<h3 id="load-regulation">Load regulation</h3>
+<!-- %% Source https://redmine.erlang-solutions.com/projects/megaloader/wiki/LoadRegulationProposal14084-20141209_/31#Callbacks - with minor adaptations. -->
+
+<p>The Escript has to define two load regulation-related callbacks:</p>
+<ul>
+<li>Initialization callback <code>init_load_regulation_metrics/0</code>;</li>
+<li>Regulation callback <code>load_regulation_targets/2</code>.</li>
+</ul>
+<h4 id="initialization-callback">Initialization callback</h4>
+<p>Initialize custom SUT-related metrics.</p>
+<p>The returned metrics datapoints are read by Megaload in the regulation loop.<br />
+It is guaranteed to be executed on the Megaload node.</p>
+<h5 id="type_1">Type</h5>
+<pre><code>-callback init_load_regulation_metrics() -&gt; {ok, InitializedMetrics}
+  when InitializedMetrics :: [Metric, ...],
+       Metric :: {ShortName, Target, Actual},
+       ShortName :: atom(), %% E.g. time_to_deliver
+       Target :: LoaderMetricsMetric,
+       Actual :: LoaderMetricsMetric,
+       LoaderMetricsMetric :: {Name, DataPoints :: [DataPoint, ...]}.
+</code></pre>
+
+<p>The prefix of the returned names should be <code>&lt;&lt;"load_regulation"&gt;&gt;</code>, followed by <code>&lt;&lt;"target"&gt;&gt; | &lt;&lt;"actual"&gt;&gt;</code> and the short name of the metrics e.g. <code>&lt;&lt;"time_to_deliver"&gt;&gt;</code>.</p>
+<h5 id="expected-behaviour_1">Expected behaviour</h5>
+<p>A sequence of calls to <code>loader_metrics:new_*</code>.</p>
+<h4 id="regulation-callback">Regulation callback</h4>
+<p>Compute new proposed targets for number of workers and rate.</p>
+<p>It is not guaranteed to be executed on the Megaload node.</p>
+<h5 id="type_2">Type</h5>
+<pre><code>-callback load_regulation_targets(MetricsValues, OldTargets) -&gt; {ok, NewTargets}
+  when MetricsValues :: [MetricValues, ...],
+       MetricValues :: {ShortName, TargetDataValues, ActualDataValues},
+       TargetDataValues :: DataValues,
+       ActualDataValues :: DataValues,
+       DataValues :: [LoaderMetricsDataValue, ...],
+       LoaderMetricsDataValue :: any(),
+       OldTargets :: Targets,
+       NewTargets :: Targets,
+       Targets :: {{workers, TargetWorkers}, {rate, TargetRate}},
+       TargetWorkers :: pos_integer(),
+       TargetRate :: pos_integer().
+</code></pre>
+
+<h5 id="expected-behaviour_2">Expected behaviour</h5>
+<p>Purely functional logic (i.e. deterministic and free of side effects) e.g. it shall not attempt to read metrics.</p>
+<h3 id="rate-workers-arrival-rate-and-unique-ids">Rate, workers, arrival rate and unique ids</h3>
+<p>The initial values for rate and workers, and the value of the arrival rate for all the test may be defined using Erlang attributes.
+If these are missing, they default to:</p>
+<ul>
+<li>rate = 1, the load regulation will increase this value based on available CPU</li>
+<li>workers = 1, the load regulation will increase this value based on available memory</li>
+<li>arrival_rate = 20</li>
+</ul>
+<p>The unique ids may be used by an Erlang escript to have a unique integer identifier on each concurrent scenario. As an example, this identifier can be used in XMPP to generate unique user/password pairs. The unique id is stored in the process dictionary and can be retrieved using <code>erlang:get(unique_id)</code>.</p>
+<p>The total number of unique identifiers is split among nodes to avoid duplicates. By default, Megaload will assign 1,000,000 unique identifiers per node. As an example, two nodes with 15000 unique ids are split such as one node has identifier 1 to 7499 and the other identifier 7500 to 15000. Note that if a node needs more identifiers than provided, it may generate duplicates by overlapping ids with other nodes.</p>
+<h4 id="example">Example</h4>
+<pre><code>-rate(15). %% requests per second
+-workers(150). %% concurrent_scenarios in the JSON specification
+-arrival_rate(20). %% new workers/scenarios per second
+-unique_ids(15000).
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../escript_api/" class="btn btn-neutral float-right" title="Escript API"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../action_math/" class="btn btn-neutral" title="Math"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../action_math/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../escript_api/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Upload configuration - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Upload configuration";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Upload configuration</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#upload-configuration">Upload configuration</a></li>
+                
+                    <li><a class="toctree-l4" href="#upload-test-specification">Upload test specification</a></li>
+                
+                    <li><a class="toctree-l4" href="#clear-test-specification">Clear test specification</a></li>
+                
+                    <li><a class="toctree-l4" href="#upload-additional-data">Upload additional data</a></li>
+                
+                    <li><a class="toctree-l4" href="#upload-actions-module">Upload actions module</a></li>
+                
+                    <li><a class="toctree-l4" href="#upload-property-module">Upload property module</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>API &raquo;</li>
+        
+      
+    
+    <li>Upload configuration</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="upload-configuration">Upload configuration</h1>
+<h2 id="upload-test-specification">Upload test specification</h2>
+<p>Test specifications can be written and composed from different files. The load configuration call allows you to provision this configuration on each node.<br />
+The test specifications are parsed at this point and any error in the syntax will be noted in the response. Validation of the content is done on <code>start_load</code>, to ensure all required phases, scenarios and plugins are defined in the system.</p>
+<pre><code>POST /api/megaload/upload_config_file/:familyUUID
+</code></pre>
+
+<h3 id="input">Input</h3>
+<p>HTTP multipart request with <code>Content-Type : application/json</code></p>
+<h3 id="example">Example</h3>
+<pre><code>-----------------------------18036622772727284871017578311
+Content-Disposition: form-data; name=&quot;files[]&quot;; filename=&quot;test.json&quot;
+Content-Type: application/json
+
+[ {&quot;phase&quot; : {&quot;id&quot; : &quot;phase-1&quot;,
+              &quot;arrival_rate&quot; : 10,
+              &quot;duration&quot; : 30000,
+              &quot;concurrent_scenarios&quot; : 10,
+              &quot;rate&quot; : 10,
+              &quot;scenarios&quot; : [{&quot;main-page&quot; : 1}]
+             }
+  }
+]
+
+-----------------------------18036622772727284871017578311--
+</code></pre>
+
+<h3 id="returns">Returns</h3>
+<p>If the test specification is invalid, it returns a 409 response code with an error message explaining the reason.</p>
+<h3 id="example-response">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">{}
+</code></pre>
+
+<h2 id="clear-test-specification">Clear test specification</h2>
+<p>Clear all tests specifications in the system. If a test is running, it will not clear the specification and return and error.</p>
+<pre><code>POST /api/megaload/clear_config_file/:familyUUID
+</code></pre>
+
+<h3 id="example-request">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/clear_config_load/c719a664-83cb-4ab5-b02f-0f91f3e6f512  --data &quot;&quot; --header &quot;Content-Type: application/json&quot;
+</code></pre>
+
+<h3 id="example-response_1">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">{}
+</code></pre>
+
+<h2 id="upload-additional-data">Upload additional data</h2>
+<p>Some tests may require additional information from the user. This information can be provided in the form of CSV files that must be provisioned in the system.</p>
+<p>The name to be used in the test must be provided when the file is uploaded through Megaload-UI.</p>
+<pre><code>POST /api/megaload/upload_data_file/:familyUUID
+</code></pre>
+
+<h3 id="input_1">Input</h3>
+<p>HTTP multipart request with <code>Content-Type : application/octet-stream</code></p>
+<h3 id="example_1">Example</h3>
+<pre><code>-----------------------------18036622772727284871017578311
+Content-Disposition: form-data; name=&quot;files[]&quot;; filename=&quot;users.csv&quot;
+Content-Type: octet-stream
+
+user1,password1
+user2,password2
+user3,password3
+
+-----------------------------18036622772727284871017578311--
+</code></pre>
+
+<h3 id="example-response_2">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">{}
+</code></pre>
+
+<h2 id="upload-actions-module">Upload actions module</h2>
+<p>Some tests may require additional actions provided by the user. This is the case of property-based testing where they can define custom generators.</p>
+<p>Modules defining actions can be uploaded from this interface. They are compiled in every Megaload node and compilation errors are reported. If a module with the same name exists in core Megaload, this call reports an error. If another action module with the same name was uploaded through this call, it is replaced.</p>
+<pre><code>POST /api/megaload/upload_actions_file/:familyUUID
+</code></pre>
+
+<h3 id="input_2">Input</h3>
+<p>HTTP multipart request with <code>Content-Type : application/octet-stream</code></p>
+<h3 id="example_2">Example</h3>
+<pre><code>-----------------------------18036622772727284871017578311
+Content-Disposition: form-data; name=&quot;files[]&quot;; filename=&quot;ml_integer.erl&quot;
+Content-Type: application/octet-stream
+
+-module(ml_integer).
+-behaviour(loader_action).
+
+-export([
+   validation_spec/1,
+   post_validation/1,
+   increase/3
+  ]).
+
+-record('integer-increase', {value}).
+
+-compile({parse_transform, exprecs}).
+
+-export_records(['integer-increase']).
+
+%%%===================================================================
+%%% Configuration callbacks
+%%%===================================================================
+validation_spec('integer-increase') -&gt;
+    [{value, mandatory, integer, false}].
+
+post_validation(_) -&gt;
+    fun(V) -&gt; V end.
+
+%%%===================================================================
+%%% Plugin actions
+%%%===================================================================
+-spec increase(#'integer-increase'{}, loader_run:global_test_id(), undefined) -&gt;
+      {ok, integer(), undefined}.
+increase(#'integer-increase'{value = Value}, GlobalTestId, undefined) -&gt;
+    {ok, Value + 1, undefined}.
+
+-----------------------------18036622772727284871017578311--
+</code></pre>
+
+<h3 id="returns_1">Returns</h3>
+<p>If the module exists or is invalid, it returns a 409 response code with an error message explaining the reason.</p>
+<h3 id="example-response_3">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">{}
+</code></pre>
+
+<h2 id="upload-property-module">Upload property module</h2>
+<pre><code>POST /api/megaload/upload_property_file/:familyUUID
+</code></pre>
+
+<h3 id="input_3">Input</h3>
+<p>HTTP multipart request with <code>Content-Type : application/octet-stream</code></p>
+<h3 id="example_3">Example</h3>
+<pre><code>-----------------------------18036622772727284871017578311
+Content-Disposition: form-data; name=&quot;files[]&quot;; filename=&quot;quickcheck_prop.erl&quot;
+Content-Type: application/octet-stream
+
+-module(quickcheck_prop).
+
+-include_lib(&quot;eqc/include/eqc.hrl&quot;).
+
+-compile(export_all).
+
+prop_load() -&gt;
+    ?FORALL(Users, eqc_loadtest:linear(10, 100),
+        begin
+            {ok, ok} = loader:update_phase(&lt;&lt;&quot;phase1&quot;&gt;&gt;,
+                                           [{&lt;&lt;&quot;concurrent_scenarios&quot;&gt;&gt;, Users}]),
+            case loader:start_load(&quot;test&quot;) of
+                {ok,ok} -&gt;
+                    loader_pbt:wait_until_terminated(),
+                    {ok, Requests} = loader:get_counter(
+                                           &lt;&lt;&quot;http_counter_totalRequests&quot;&gt;&gt;),
+                    Requests &gt; 1000;
+                Other -&gt;
+                    false
+                end
+        end).
+
+-----------------------------18036622772727284871017578311--
+</code></pre>
+
+<h3 id="returns_2">Returns</h3>
+<p>If the module is invalid, it returns a 409 response code with an error message explaining the reason.</p>
+<h3 id="example-response_4">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">{}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../rest_api_escript/" class="btn btn-neutral float-right" title="Escript handling"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../rest_api_runner/" class="btn btn-neutral" title="Runner"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../rest_api_runner/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../rest_api_escript/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* for readthedocs theme */
+
+div[role="main"] p.h1 {
+  font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+  font-weight:700;
+  font-size: 25px;
+  margin-top: 29px;
+  margin-bottom: 25px;
+}
+
+div[role="main"] ol li {
+  margin-top:;
+  margin-bottom: 9px;
+  /*line-height: 21px;*/
+  font-size: 16px;
+}
+
+div[role="main"] ul li {
+  margin-top:;
+  margin-bottom: 6px;
+  /*line-height: 21px;*/
+  font-size: 16px;
+}
+
+div[role="main"] .ui-text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div[role="main"] img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*----*/
+

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reporting - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Reporting";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_write/">Writing a Megaload test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Reporting</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#reporting">Reporting</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-all-test-identifiers">Get all test identifiers</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-all-phase-identifiers">Get all phase identifiers</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-test-assertions-report">Get test assertions report</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-test-assertion-details">Get test assertion details</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-phase-assertion-details">Get phase assertion details</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-response-time-statistics">Get response time statistics</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-response-time-statistics-per-url">Get response time statistics per URL</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-rate-statistics">Get rate statistics</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-configuration">Get configuration</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>API &raquo;</li>
+        
+      
+    
+    <li>Reporting</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="reporting">Reporting</h1>
+<h2 id="get-all-test-identifiers">Get all test identifiers</h2>
+<pre><code>GET /api/megaload/all_tests/:familyUUID
+</code></pre>
+
+<h3 id="returns">Returns</h3>
+<p>List of test identifiers</p>
+<h3 id="example-request">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/all_tests/c719a664-83cb-4ab5-b02f-0f91f3e6f512
+</code></pre>
+
+<h3 id="example-response">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">[&quot;test-1&quot;, &quot;test-2&quot;]
+</code></pre>
+
+<h2 id="get-all-phase-identifiers">Get all phase identifiers</h2>
+<pre><code>POST /api/megaload/phases/:familyUUID
+</code></pre>
+
+<h3 id="input">Input</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>Test identifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<pre><code class="json">{ &quot;id&quot; : &quot;test-1&quot; }
+</code></pre>
+
+<h3 id="returns_1">Returns</h3>
+<p>List of phase identifiers for a given test.</p>
+<h3 id="example-request_1">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/phases/c719a664-83cb-4ab5-b02f-0f91f3e6f512 --data &quot;{\&quot;id\&quot; : \&quot;test-1\&quot;}&quot; --header &quot;Content-Type: application/json&quot;
+</code></pre>
+
+<h3 id="example-response_1">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">[&quot;phase-1&quot;, &quot;phase-2&quot;]
+</code></pre>
+
+<h2 id="get-test-assertions-report">Get test assertions report</h2>
+<pre><code>GET /api/megaload/test_report/:familyUUID
+</code></pre>
+
+<h3 id="returns_2">Returns</h3>
+<p>The summary of the status of the test and phase assertions. Returns: the global success status, the test identifier, the test assertions status, and a list of the status of the assertions on each phase.</p>
+<h3 id="example-request_2">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/test_report/c719a664-83cb-4ab5-b02f-0f91f3e6f512
+</code></pre>
+
+<h3 id="example-response_2">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">{
+  &quot;phase_assert&quot; : [
+                    {
+                      &quot;id&quot; : &quot;phase-1&quot;,
+                      &quot;position&quot; : 1,
+                      &quot;success&quot; : true
+                    },
+                    {
+                      &quot;id&quot; : &quot;phase-2&quot;,
+                      &quot;position&quot; : 2,
+                      &quot;success&quot; : true
+                    }
+                   ],
+  &quot;test_assert&quot; : true,
+  &quot;test&quot; : &quot;test-1&quot;,
+  &quot;success&quot; : true
+}
+</code></pre>
+
+<h2 id="get-test-assertion-details">Get test assertion details</h2>
+<pre><code>GET /api/megaload/test_info/:familyUUID
+</code></pre>
+
+<h3 id="returns_3">Returns</h3>
+<p>The details of the test assertions.</p>
+<h3 id="example-request_3">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/test_info/c719a664-83cb-4ab5-b02f-0f91f3e6f512
+</code></pre>
+
+<h3 id="example-response_3">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">{
+  &quot;assertions&quot; :
+     [
+      {
+        &quot;json&quot; : { &quot;assert-counter&quot; : { &quot;id&quot; : &quot;global_counter_successfulRequests&quot;,
+                                        &quot;metric&quot; : &quot;count&quot;,
+                                        &quot;filter&quot; : { &quot;gt&quot;: 0 }}
+                 },
+        &quot;status&quot; : true,
+        &quot;value&quot; : 387
+      },
+      {
+        &quot;json&quot; : { &quot;assert-counter&quot; : { &quot;id&quot; : &quot;global_counter_failedRequests&quot;,
+                                        &quot;metric&quot; : &quot;count&quot;,
+                                        &quot;filter&quot; : {&quot;eq&quot; : 0}}
+                 },
+        &quot;status&quot; : true,
+        &quot;value&quot; : 0
+      }
+     ],
+  &quot;id&quot; : &quot;test-1&quot;
+}
+</code></pre>
+
+<h2 id="get-phase-assertion-details">Get phase assertion details</h2>
+<pre><code>GET /api/megaload/phase_info/:familyUUID/:phasePosition
+</code></pre>
+
+<h3 id="input_1">Input</h3>
+<p>The phase position is the position returned in the get all phases request.</p>
+<h3 id="returns_4">Returns</h3>
+<p>The details of the phase assertions.</p>
+<h3 id="example-request_4">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/phase_info/c719a664-83cb-4ab5-b02f-0f91f3e6f512/1
+</code></pre>
+
+<h3 id="example-response_4">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">{
+  &quot;assertions&quot; :
+     [
+      {
+        &quot;json&quot; : { &quot;assert-counter&quot; : { &quot;id&quot; : &quot;global_counter_failedRequests&quot;,
+                                        &quot;metric&quot; : &quot;count&quot;,
+                                        &quot;filter&quot; : {&quot;eq&quot;:0}}
+                 },
+        &quot;status&quot; : true,
+        &quot;value&quot; : 0
+      },
+      {
+        &quot;json&quot; : { &quot;assert-histogram&quot; : { &quot;id&quot; : &quot;http_histogram_responseTime&quot;,
+                                          &quot;statistic&quot; : &quot;mean&quot;,
+                                          &quot;filter&quot; : {&quot;lt&quot;:500000}}
+                 },
+        &quot;status&quot; : true,
+        &quot;value&quot; : 79569.54380664653
+      }
+     ],
+  &quot;id&quot; : &quot;phase-2&quot;,
+  &quot;position&quot; : 2
+}
+</code></pre>
+
+<h2 id="get-response-time-statistics">Get response time statistics</h2>
+<pre><code>GET /api/megaload/stat_response_time/:familyUUID
+</code></pre>
+
+<h3 id="returns_5">Returns</h3>
+<p>The statistics for the response time on each available protocol. HTTP only.</p>
+<h3 id="example-request_5">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/stat_response_time/c719a664-83cb-4ab5-b02f-0f91f3e6f512
+</code></pre>
+
+<h3 id="example-response_5">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">[
+ {
+   &quot;protocol&quot; : &quot;http&quot;,
+   &quot;data&quot; : {
+              &quot;mean&quot; : 82405,
+              &quot;min&quot; : 48690,
+              &quot;max&quot; : 473296,
+              &quot;median&quot; : 81439,
+              &quot;percentile&quot; : [{ &quot;index&quot; : 50, &quot;value&quot; : 81439 },
+                              { &quot;index&quot; : 75, &quot;value&quot; : 89824 },
+                              { &quot;index&quot; : 90, &quot;value&quot; : 104831 },
+                              { &quot;index&quot; : 95, &quot;value&quot; : 120023 },
+                              { &quot;index&quot; : 99, &quot;value&quot; : 159389 },
+                              { &quot;index&quot; : 999, &quot;value&quot; : 473296 }]
+            }
+ }
+]
+</code></pre>
+
+<h2 id="get-response-time-statistics-per-url">Get response time statistics per URL</h2>
+<pre><code>GET /api/megaload/stat_response_time_per_url/:familyUUID
+</code></pre>
+
+<h3 id="returns_6">Returns</h3>
+<p>The average response time per URL. HTTP only.</p>
+<h3 id="example-request_6">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/stat_response_time_per_url/c719a664-83cb-4ab5-b02f-0f91f3e6f512
+</code></pre>
+
+<h3 id="example-response_6">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">[
+ {
+   &quot;path&quot; : &quot;/&quot;,
+   &quot;host&quot; : &quot;74.125.230.247&quot;,
+   &quot;mean&quot; : 82404.7803617571
+ }
+]
+</code></pre>
+
+<h2 id="get-rate-statistics">Get rate statistics</h2>
+<pre><code>GET /api/megaload/stat_rate/:familyUUID
+</code></pre>
+
+<h3 id="returns_7">Returns</h3>
+<p>The statistics for the global rate in requests per second. It includes all protocols.</p>
+<h3 id="example-request_7">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/stat_rate/c719a664-83cb-4ab5-b02f-0f91f3e6f512
+</code></pre>
+
+<h3 id="example-response_7">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">[
+ {
+   &quot;path&quot; : &quot;/&quot;,
+   &quot;host&quot; : &quot;74.125.230.247&quot;,
+   &quot;mean&quot; : 82404.7803617571
+ }
+]
+</code></pre>
+
+<h2 id="get-configuration">Get configuration</h2>
+<pre><code>GET /api/megaload/get_configuration/:familyUUID
+</code></pre>
+
+<h3 id="returns_8">Returns</h3>
+<p>The test configuration stored in Megaload. Returns all tests, phases, scenarios and plugins in JSON format on a single file.</p>
+<h3 id="example-request_8">Example request</h3>
+<pre><code>curl http://localhost:8080/api/megaload/get_configuration/c719a664-83cb-4ab5-b02f-0f91f3e6f512
+</code></pre>
+
+<h3 id="example-response_8">Example response</h3>
+<pre><code>Status: 200 OK
+</code></pre>
+
+<pre><code class="json">[
+ { &quot;test&quot; : { &quot;id&quot; : &quot;test-1&quot;,
+            &quot;phases&quot; : [&quot;phase-1&quot;],
+            &quot;plugins&quot; : [&quot;server-under-test&quot;] }
+ },
+ { &quot;plugin&quot; : { &quot;id&quot; : &quot;server-under-test&quot;,
+             &quot;plugin_info&quot; : {&quot;http-plugin&quot; : { &quot;servers&quot; : [{ &quot;host&quot; : &quot;127.0.0.1&quot;,
+                                                     &quot;port&quot; : 80,
+                                                   &quot;ssl&quot; : false }]
+                                      }
+                         }
+           }
+ },
+ { &quot;phase&quot; : { &quot;id&quot; : &quot;phase-1&quot;,
+             &quot;arrival_rate&quot; : 10,
+             &quot;duration&quot; : 30000,
+             &quot;concurrent_scenarios&quot; : 1,
+             &quot;rate&quot; : 5,
+             &quot;scenarios&quot; : [ { &quot;main-page&quot; : 1 } ]}
+ },
+ {&quot;scenario&quot; : { &quot;id&quot; : &quot;main-page&quot;,
+             &quot;actions&quot; : [ 
+                {&quot;http-request&quot; : {&quot;plugin_id&quot; : &quot;SUT_server&quot;,
+                               &quot;method&quot; : &quot;GET&quot;,
+                               &quot;path&quot; : &quot;/&quot;,
+                                       &quot;headers&quot; : {&quot;Cookie&quot; : &quot;PREF=ID=1345ds2345d3&quot;,
+                                                    &quot;Connection&quot; : &quot;keep-alive&quot;},
+                                       &quot;assert_status&quot; : &quot;200&quot;}}
+                         ]
+             }
+ }
+]
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../resources/" class="btn btn-neutral float-right" title="Additional resources"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../rest_api_escript/" class="btn btn-neutral" title="Escript handling"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../rest_api_escript/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../resources/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

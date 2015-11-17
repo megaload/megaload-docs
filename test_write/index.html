@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Writing a Megaload test - Megaload</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Writing a Megaload test";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Megaload</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qs_full/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Megaload</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_dashboards/">The Megaload UI</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_load_testing/">Load testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../use_monitoring/">Monitoring</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Tests</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Writing a Megaload test</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#writing-a-megaload-test">Writing a Megaload test</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-1-define-a-plugin">Step 1: Define a plugin</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-2-define-a-scenario">Step 2: Define a scenario</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-3-define-a-phase">Step 3: Define a phase</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-4-define-a-test">Step 4: Define a test</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-5-put-together-a-valid-json-document">Step 5: Put together a valid JSON document</a></li>
+                
+                    <li><a class="toctree-l4" href="#assertions">Assertions</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_spec/">Test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Examples</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Test elements</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../protocols/">Protocols</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../actions/">Actions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assertions/">Assertions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../counters/">Counters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Actions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_time/">Time</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_csv/">CSV handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_stat_counter/">Statistical counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_test_counter/">Test counters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_generic_checks/">Generic checks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_logical/">Logical operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_control/">Control structures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_variable/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_url/">URL handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_json/">JSON handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_string/">String handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../action_math/">Math</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Escript</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_test_spec/">Escript test specification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../escript_api/">Escript API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_intro/">Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_error/">Errors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_runner/">Runner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_configuration/">Upload configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_escript/">Escript handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../rest_api_reporting/">Reporting</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">Additional resources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Megaload</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Tests &raquo;</li>
+        
+      
+    
+    <li>Writing a Megaload test</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="writing-a-megaload-test">Writing a Megaload test</h1>
+<p>There are two basic concepts in Megaload that define a load profile: the <strong>test</strong> and <strong>phase</strong>. A test can be described as a container of phases, and it is the root element which includes all other elements of the load test specification.</p>
+<p><img alt="" src="../images/test.png" /></p>
+<p>Each test contains a sequence of phases that will be executed in that sequence order. A phase is a description of the load profile defined in terms of rate and number of concurrent scenarios (or users simulated by the test). A phase will have a duration and arrival rate, which determines how fast new scenarios are started. Once the maximum number of concurrent scenarios has been reached, it will keep stable while trying to reach the expected rate.</p>
+<p><img alt="" src="../images/phases.png" /></p>
+<p>Each phase may contain several <strong>scenarios</strong>, which will be executed in parallel during the load test. A scenario contains a sequence of <strong>actions</strong> which represent requests to the SUT or additional behaviour.</p>
+<p>The rest of this chapter explains how to write a very simple test specification using these concepts. The <a href="../test_spec/">spec</a> section describes in detail all the elements of a test specification.</p>
+<p>The following example shows you how to write a test for a small online shop that uses HTTP and JSON. The test uses the calls to list customers and to get a customer's details.</p>
+<p>The following call lists the customers:</p>
+<pre><code class="http">GET http://&lt;IP&gt;:5050/customers
+</code></pre>
+
+<p>Response:</p>
+<pre><code class="json">{&quot;data&quot; : [ 
+           {&quot;id&quot; : &quot;goku&quot;, 
+           &quot;email&quot; : &quot;goku@dragon.ball&quot;, 
+           &quot;account_balance&quot; : 500, 
+           &quot;currency&quot; : &quot;GBP&quot; 
+           }, 
+           {...}, 
+           {...} 
+          ], 
+    &quot;count&quot; : 4 
+} 
+</code></pre>
+
+<p>The following call gets the details for a specific customer:</p>
+<pre><code class="http">GET http://&lt;IP&gt;:5050/customer/bulma
+</code></pre>
+
+<p>Response:</p>
+<pre><code class="json">{&quot;id&quot; : &quot;bulma&quot;, 
+   &quot;email&quot; : &quot;bulma@dragon.ball&quot;, 
+   &quot;account_balance&quot; : 750000, 
+   &quot;currency&quot; : &quot;GBP&quot; 
+} 
+</code></pre>
+
+<p>You can write the test specification in any text editor, or using the embedded editor on the Megaload dashboard. To use the embedded editor, go to the dashboard, click <strong>Load Test</strong> and then <strong>Edit test cases</strong>.</p>
+<h2 id="step-1-define-a-plugin">Step 1: Define a plugin</h2>
+<p>The plugin is the target server or system under test (SUT). A plugin looks as follows:</p>
+<pre><code class="json">{ 
+  &quot;plugin&quot; : 
+    { 
+      &quot;id&quot; : &lt;ID&gt;, 
+      &quot;plugin_info&quot; : &lt;SPECIFIC_PLUGIN_INFO&gt; 
+    } 
+} 
+</code></pre>
+
+<ul>
+<li><code>id</code> specifies a name for the plugin.</li>
+<li><code>plugin_info</code> contains the plugin details.</li>
+</ul>
+<p>For Example:</p>
+<pre><code class="json">{ 
+  &quot;plugin&quot; : 
+    { 
+      &quot;id&quot; : &quot;SUT-server&quot;, 
+      &quot;plugin_info&quot; : {&quot;http-plugin&quot; : 
+                             {&quot;servers&quot; : 
+                                 [ 
+                                   { &quot;host&quot; : &quot;127.0.0.1&quot;, 
+                                     &quot;port&quot; : 80, 
+                                     &quot;ssl&quot; : false } 
+                                 ], 
+                               &quot;stats_per_url&quot; : true 
+                             } 
+                    } 
+    } 
+} 
+</code></pre>
+
+<h2 id="step-2-define-a-scenario">Step 2: Define a scenario</h2>
+<p>Our example has a simple scenario with a single request. A scenario looks as follows:</p>
+<pre><code class="json">{ 
+  &quot;scenario&quot; : 
+    { 
+      &quot;id&quot; : &lt;ID&gt;, 
+      &quot;keepalive&quot; : &lt;REUSE_CONNECTION&gt;,
+      &quot;actions&quot; : &lt;ACTIONS&gt;
+    } 
+} 
+</code></pre>
+
+<ul>
+<li><code>id</code> is he name you give the scenario.</li>
+<li><code>keepalive</code> specifies whether to repeate the scenario and reuse open connections.</li>
+<li><code>actions</code> will contain the actions that should be executed - in this example an HTTP request.</li>
+</ul>
+<p>An HTTP request looks as follows:</p>
+<pre><code class="json">{ 
+  &quot;http-request&quot; : 
+    { 
+      &quot;plugin_id&quot; : &lt;PLUGIN_ID&gt;, 
+      &quot;method&quot; : &lt;HTTP_REQUEST_METHOD&gt;, 
+      &quot;path&quot; : &lt;HTTP_REQUEST_URI&gt;
+    }
+} 
+</code></pre>
+
+<p>For our example test:</p>
+<pre><code class="json">{ 
+  &quot;http-request&quot; : 
+    { 
+      &quot;plugin_id&quot; : &quot;SUT-server&quot;, 
+      &quot;method&quot; : &quot;GET&quot;, 
+      &quot;path&quot; : &quot;/customers&quot; 
+    } 
+}
+</code></pre>
+
+<p>The complete scenario:</p>
+<pre><code class="json">{ 
+  &quot;scenario&quot; : 
+  { 
+    &quot;id&quot; : &quot;get-customers&quot;, 
+    &quot;keepalive&quot; : true, 
+    &quot;actions&quot; : [{&quot;http-request&quot; : 
+                    { 
+                      &quot;plugin_id&quot;: &quot;SUT-server&quot;, 
+                      &quot;method&quot;: &quot;GET&quot;, 
+                      path&quot;: &quot;/customers&quot; 
+                    } 
+                }], 
+  } 
+} 
+</code></pre>
+
+<h2 id="step-3-define-a-phase">Step 3: Define a phase</h2>
+<p>A phase includes a load profile that specifies a ramp-up time (so that the system is not immediately overloaded) and the maximum rate and number of processes. It also specifies which scenarios to execute.</p>
+<pre><code class="json">{ 
+  &quot;phase&quot; : 
+    { 
+      &quot;id&quot; : &lt;ID&gt;, 
+      &quot;arrival_rate&quot; : &lt;RAMP_UP_ARRIVAL_RATE&gt;,
+      &quot;duration&quot; : &lt;TEST_DURATION&gt;, 
+      &quot;concurrent_scenarios&quot; : &lt;MAX_CONCURRENT_SCENARIOS&gt;, 
+      &quot;rate&quot; : &lt;RATE&gt;, 
+      &quot;scenarios&quot; : &lt;SCENARIOS&gt; 
+    } 
+} 
+</code></pre>
+
+<ul>
+<li><code>id</code> is the name you give the phase.</li>
+<li><code>arrival_rate</code> specifies an arrival rate in number of scenarios started per second.</li>
+<li><code>duration</code> specifies the duration of the phase in milliseconds.</li>
+<li><code>concurrent_scenarios</code> specifies the maximum number of concurrent scenarios.</li>
+<li><code>rate</code> specifies the maximum number of requests per second.</li>
+<li><code>scenarios</code> is used for specifying which scenarios to run and the frequency to choose them. In this example, we will run the scenario from the previous step.</li>
+</ul>
+<p>The complete phase for this example:</p>
+<pre><code class="json">{ 
+  &quot;phase&quot; : 
+    { 
+      &quot;id&quot; : &quot;SUT-low&quot;, 
+      &quot;arrival_rate&quot; : 10,
+      &quot;duration&quot; : 60000,
+      &quot;concurrent_scenarios&quot; : 100,
+      &quot;rate&quot; : 250,
+      &quot;scenarios&quot; : [{&quot;get-customers&quot; : 1}]
+    } 
+} 
+</code></pre>
+
+<h2 id="step-4-define-a-test">Step 4: Define a test</h2>
+<p>A test is a container of phases. It looks as follows:</p>
+<pre><code class="json">{ 
+  &quot;test&quot; : 
+  { 
+    &quot;id&quot; : &lt;ID&gt;, 
+    &quot;phases&quot; : &lt;PHASES&gt;, 
+    &quot;plugins&quot; : &lt;PLUGINS&gt; 
+  } 
+}
+</code></pre>
+
+<ul>
+<li><code>id</code> is the name you give the test.</li>
+<li><code>phases</code> will specify which phases to run. In this example, we will run the phase from the previous step.</li>
+<li><code>plugins</code> specifies the plugin to use.</li>
+</ul>
+<h2 id="step-5-put-together-a-valid-json-document">Step 5: Put together a valid JSON document</h2>
+<p>Megaload input is a <strong>list</strong> of JSON objects:</p>
+<pre><code class="json">[ 
+  {&quot;test&quot; : ... }, 
+  {&quot;plugin&quot; : ... }, 
+  {&quot;phase&quot; : ... }, 
+  {&quot;scenario&quot; : ... } 
+] 
+</code></pre>
+
+<p>You can now save the test (for example, as <code>SUT-test-example.json</code>), upload the text file using the Megaload dashboard and run the test. However it would be useful to include some <strong>checks</strong> in the test, using Megaload <strong>assertions</strong>.</p>
+<h2 id="assertions">Assertions</h2>
+<p>Megaload assertions can be included in both <code>test</code> and <code>phase</code> specifications. These assertions can check the value of any counter in the system and match it against the provided specification. Assertions are explained in more detail in the section <a href="../assertions/">assertions</a>.</p>
+<pre><code class="json">{ 
+  &quot;test&quot; : 
+    { 
+      &quot;id&quot; : &quot;SUT-test&quot;, 
+      &quot;phases&quot; : [&quot;SUT-low&quot;], 
+      &quot;plugins&quot; : [&quot;SUT-server&quot;], 
+      &quot;assertions&quot; : &lt;ASSERTIONS&gt; 
+    } 
+} 
+</code></pre>
+
+<p>The assertions can include counters and histograms, as shown below.</p>
+<pre><code class="json">[ 
+  {&quot;assert-counter&quot; : 
+    {&quot;id&quot; : &quot;global_counter_failedRequests&quot;, 
+      &quot;metric&quot; : &quot;count&quot;, 
+      &quot;filter&quot; : {&quot;eq&quot; : 0}} 
+  }, 
+  {&quot;assert-histogram&quot; : 
+    {&quot;id&quot; : &quot;http_histogram_responseTime&quot;, 
+      &quot;statistic&quot; : &quot;mean&quot;, 
+      &quot;filter&quot; : {&quot;lt&quot; : 150000}} 
+  } 
+]
+</code></pre>
+
+<p>When you run the test, you can view the results of the assertions on the <strong>Load report</strong> page.</p>
+<p>There is a different kind of assertion that can be used to validate the response code and content of HTTP responses. These assertions are used to determine whether a request is successful or not and increase the related counter. Thus, the test and phase assertions can be combined with these HTTP assertions to validate the result of a test. </p>
+<p>Assertions are included in the HTTP request with the following format:</p>
+<pre><code class="json">{ 
+  &quot;http-request&quot; : 
+    { 
+      &quot;plugin_id&quot; : &lt;PLUGIN_ID&gt;, 
+      &quot;method&quot; : &lt;HTTP_REQUEST_METHOD&gt;, 
+      &quot;path&quot; : &lt;HTTP_REQUEST_URI&gt;, 
+      &quot;assert_status&quot; : &lt;HTTP_RESPONSE_STATUS_CODE&gt;, 
+      &quot;assert_body&quot; : &lt;ACTION_CHECK&gt; 
+    } 
+} 
+</code></pre>
+
+<p>To validate the <strong>response code</strong>:</p>
+<pre><code class="json">{ 
+  &quot;http-request&quot; : 
+    { 
+      &quot;plugin_id&quot; : &quot;SUT-server&quot;, 
+      &quot;method&quot; : &quot;GET&quot;, 
+      &quot;path&quot; : &quot;/customers&quot;, 
+      &quot;assert_status&quot; : &quot;200&quot; 
+    } 
+} 
+</code></pre>
+
+<p>To validate the <strong>content</strong>:</p>
+<pre><code class="json">{ 
+  &quot;http-request&quot; : 
+    { 
+      &quot;plugin_id&quot; : &quot;SUT-server&quot;, 
+      &quot;method&quot; : &quot;GET&quot;, 
+      &quot;path&quot; : &quot;/customers&quot;, 
+      &quot;assert_body&quot; :
+          {&quot;jsonpath-value&quot; : 
+              {&quot;path&quot; : &quot;body.count&quot;, 
+                &quot;value&quot; : 5}}
+    }
+} 
+</code></pre>
+
+<p>Megaload automatically updates counters for successful and failed requests:</p>
+<ul>
+<li><code>global_counter_successfulRequests</code></li>
+<li><code>global_counter_failedRequests</code></li>
+<li><code>http_counter_successfulRequests_&lt;SUT_IP&gt;</code></li>
+<li><code>http_counter_failedRequests_&lt;SUT_IP&gt;</code></li>
+</ul>
+<p>The following checks whether a user is a customer of the shop:</p>
+<pre><code>{ 
+  &quot;http-request&quot; : 
+    { 
+      &quot;plugin_id&quot; : &quot;SUT-server&quot;, 
+      &quot;method&quot; : &quot;GET&quot;, 
+      &quot;path&quot; : &quot;/customer/jack&quot;,
+      &quot;assert_status&quot; : &quot;404&quot; 
+    }
+} 
+</code></pre>
+
+<p>When you run the test, go to <strong>Load report</strong> &gt; <strong>Assertion details</strong> on the dashboard to view the results.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../test_spec/" class="btn btn-neutral float-right" title="Test specification"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../use_monitoring/" class="btn btn-neutral" title="Monitoring"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../use_monitoring/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../test_spec/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
